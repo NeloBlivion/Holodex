@@ -33,13 +33,12 @@
                 class="primary--text"
                 :class="{ 'text--lighten-2': darkMode, 'text--darken-4': !darkMode }"
               >dex</span>
-              <!-- <v-icon
+              <v-icon
                 size="30"
                 class="change-org-icon"
-              > -->
-                <!--  VUE3 BREAK: :class="{ 'rotate-180': activator.attrs['aria-expanded'] === 'true' }" -->
+              > 
                 {{ icons.mdiMenuDown }}
-              <!-- </v-icon> -->
+              </v-icon> 
             </div>
           </slot>
         </template>
@@ -102,7 +101,7 @@
                   <!-- <v-icon>{{ icons.mdiChevronUp }}</v-icon> -->
                 </v-btn>
                 <v-btn icon :ripple="false" @click.stop="shiftOrgFavorites({ org, up: false })">
-                  <!-- <v-icon>{{ icons.mdiChevronDown }}</v-icon> -->
+                  <v-icon>{{ icons.mdiChevronDown }}</v-icon>
                 </v-btn>
               </v-list-item-action>
             </v-list-item>
