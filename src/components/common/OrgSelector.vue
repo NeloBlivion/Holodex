@@ -33,13 +33,13 @@
                 class="primary--text"
                 :class="{ 'text--lighten-2': darkMode, 'text--darken-4': !darkMode }"
               >dex</span>
-              <v-icon
+              <!-- <v-icon
                 size="30"
                 class="change-org-icon"
-              >
+              > -->
                 <!--  VUE3 BREAK: :class="{ 'rotate-180': activator.attrs['aria-expanded'] === 'true' }" -->
                 {{ icons.mdiMenuDown }}
-              </v-icon>
+              <!-- </v-icon> -->
             </div>
           </slot>
         </template>
@@ -85,7 +85,7 @@
                   :color="orgFavoritesNameSet.has(org.name) ? 'yellow' : 'grey'"
                   @click.stop="toggleFavoriteOrg(org)"
                 >
-                  <v-icon>{{ icons.mdiStar }}</v-icon>
+                  <!-- <v-icon>{{ icons.mdiStar }}</v-icon> -->
                 </v-btn>
               </v-list-item-action>
 
@@ -99,10 +99,10 @@
                 @click.stop.prevent
               >
                 <v-btn icon :ripple="false" @click.stop="shiftOrgFavorites({ org, up: true })">
-                  <v-icon>{{ icons.mdiChevronUp }}</v-icon>
+                  <!-- <v-icon>{{ icons.mdiChevronUp }}</v-icon> -->
                 </v-btn>
                 <v-btn icon :ripple="false" @click.stop="shiftOrgFavorites({ org, up: false })">
-                  <v-icon>{{ icons.mdiChevronDown }}</v-icon>
+                  <!-- <v-icon>{{ icons.mdiChevronDown }}</v-icon> -->
                 </v-btn>
               </v-list-item-action>
             </v-list-item>

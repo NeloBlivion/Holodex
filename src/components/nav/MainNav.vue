@@ -12,10 +12,10 @@
     </NavDrawer>
 
     <!--* nav drawer is for the left --->
-    <BottomNav v-if="isMobile" :pages="pages.filter((page) => !page.collapsible)" :active="!isWatchPage" />
+    <!-- <BottomNav v-if="isMobile" :pages="pages.filter((page) => !page.collapsible)" :active="!isWatchPage" /> -->
     <!--* bottom bar --->
     <!-- <music-bar></music-bar> -->
-    <MusicBar2 v-if="$store.state.music.isOpen" />
+    <!-- <MusicBar2 v-if="$store.state.music.isOpen" /> -->
 
     <v-app-bar
       v-show="!(isMobile && isWatchPage) && !isMultiView"
@@ -37,7 +37,7 @@
         <!--================= Logo & Search Bar (Space permitting) ================-->
 
         <v-app-bar-nav-icon @click.stop="navDrawer = !navDrawer">
-          <v-icon>{{ icons.mdiMenu }}</v-icon>
+          <v-icon>{{ $vuetify.icons.mdiMenu }}</v-icon>
         </v-app-bar-nav-icon>
         <v-toolbar-title style="overflow: visible" :class="{ 'pa-0': isMobile }">
           <router-link :to="{ name: $store.state.settings.defaultOpen || '/' }">
@@ -61,7 +61,7 @@
             class="music-bar-open-btn"
             @click="$store.commit('music/openBar')"
           >
-            <v-icon>{{ icons.mdiMusic }}</v-icon>
+            <v-icon>{{ $vuetify.icons.mdiMusic }}</v-icon>
           </v-btn>
         </v-slide-y-transition>
         <ResponsiveMenu
@@ -77,7 +77,7 @@
               :class="{ 'ml-auto': isMobile }"
               v-on="on"
             >
-              <v-icon>{{ icons.mdiPlaylistPlay }}</v-icon>
+              <v-icon>{{ $vuetify.icons.mdiPlaylistPlay }}</v-icon>
             </v-btn>
           </template>
           <edit-playlist>
@@ -103,7 +103,7 @@
               v-on="on"
             >
               <v-icon v-if="!($store.state.userdata && $store.state.userdata.user)">
-                {{ icons.mdiAccountCircleOutline }}
+                {{ $vuetify.icons.mdiAccountCircleOutline }}
               </v-icon>
               <v-avatar v-else size="40">
                 <img
@@ -122,7 +122,7 @@
         <!--================= Search [🔍] Button (Mobile Only) ================-->
 
         <v-btn v-if="isMobile" icon @click="searchBarExpanded = true">
-          <v-icon>{{ icons.mdiMagnify }}</v-icon>
+          <v-icon>{{ $vuetify.icons.mdiMagnify }}</v-icon>
         </v-btn>
       </template>
 
@@ -132,7 +132,7 @@
 
       <template v-else>
         <v-app-bar-nav-icon class="backButton" @click="searchBarExpanded = false">
-          <v-icon>{{ icons.mdiClose }}</v-icon>
+          <v-icon>{{ $vuetify.icons.mdiClose }}</v-icon>
         </v-app-bar-nav-icon>
         <SearchBar key="main-search-bar" :autofocus="isMobile" />
       </template>
@@ -229,47 +229,47 @@ export default {
                 {
                     name: this.$t("component.mainNav.home"),
                     path: "/",
-                    icon: this.icons.mdiHome,
+                    icon: this.$vuetify.icons.mdiHome,
                 },
                 {
                     name: this.$t("component.mainNav.favorites"),
                     path: "/favorites",
-                    icon: this.icons.mdiHeart,
+                    icon: this.$vuetify.icons.mdiHeart,
                 },
                 {
                     name: this.$t("component.mainNav.channels"),
                     path: `/channel?org=${this.$store.state.currentOrg.name}`,
-                    icon: this.icons.mdiAccountBoxMultiple,
+                    icon: this.$vuetify.icons.mdiAccountBoxMultiple,
                 },
                 {
                     name: this.$t("component.mainNav.playlist"),
                     path: "/playlists",
-                    icon: this.icons.mdiPlaylistPlay,
+                    icon: this.$vuetify.icons.mdiPlaylistPlay,
                     divider: true,
                 },
                 {
                     name: this.$t("component.mainNav.multiview"),
                     path: "/multiview",
-                    icon: this.icons.mdiViewDashboard,
+                    icon: this.$vuetify.icons.mdiViewDashboard,
                     collapsible: true,
                 },
                 {
                     name: this.$t("component.mainNav.music"),
                     path: "/music",
-                    icon: this.icons.mdiMusic,
+                    icon: this.$vuetify.icons.mdiMusic,
                     collapsible: true,
                     divider: true,
                 },
                 {
                     name: this.$t("component.mainNav.about"),
                     path: "/about",
-                    icon: this.icons.mdiHelpCircle,
+                    icon: this.$vuetify.icons.mdiHelpCircle,
                     collapsible: true,
                 },
                 {
                     name: this.$t("component.mainNav.settings"),
                     path: "/settings",
-                    icon: this.icons.mdiCog,
+                    icon: this.$vuetify.icons.mdiCog,
                     collapsible: true,
                 },
             ];

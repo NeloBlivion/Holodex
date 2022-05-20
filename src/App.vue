@@ -8,16 +8,18 @@
     <MainNav />
 
     <v-main style="transition: none">
-      <PullToRefresh />
+      <!-- <PullToRefresh /> -->
+        <!-- <router-view :key="viewKey" /> -->
+
       <keep-alive
         max="4"
         exclude="Watch,MugenClips,EditVideo,MultiView,Channel,Playlists,About"
       >
-        <router-view :key="viewKey" />
+        <div></div>
       </keep-alive>
     </v-main>
-    <PWAUpdate />
-    <ReportDialog />
+    <!-- <PWAUpdate /> -->
+    <!-- <ReportDialog /> -->
     <InstallPrompt v-if="$store.state.isMobile" />
   </v-app>
 </template>

@@ -1,8 +1,9 @@
 import { createApp, h } from "vue";
-import VueGTag from "vue-gtag-next";
+// import VueGTag from "vue-gtag-next";
 // import VueMeta from "vue-meta";
 // import VueI18n from "vue-i18n";
-import * as icons from "@/utils/icons";
+// import * as icons from "@/utils/icons";
+import * as icons from '@mdi/js'
 // import LoadScript from "vue-plugin-load-script";
 // import PortalVue from "portal-vue";
 import App from "./App.vue";
@@ -24,18 +25,18 @@ app.use(vuetify);
 app.use(i18n);
 
 app.config.productionTip = false;
-app.config.devtools = window.location.hostname === "localhost";
-app.config.performance = ["localhost", "staging.holodex.net"].includes(window.location.hostname);
+app.config.devtools = true;
+app.config.performance = true;
 
-app.use(
-    VueGTag,
-    {
-        config: {
-            id: "UA-178428556-1",
-        },
-    },
-    router,
-);
+// app.use(
+//     VueGTag,
+//     {
+//         config: {
+//             id: "UA-178428556-1",
+//         },
+//     },
+//     router,
+// );
 
 // Create a manager to use a custom path (due to reverse proxy)
 if (!(window as any).hideMeta) {

@@ -22,14 +22,14 @@
           :class="{ 'v-list-item--active': $route.fullPath === page.path }"
           @click.prevent="handlePageClick(page)"
         >
-          <v-list-item-icon>
+          <!-- <v-list-item-icon> -->
             <v-icon>{{ page.icon }}</v-icon>
-          </v-list-item-icon>
+          <!-- </v-list-item-icon> -->
           <v-list-item-content>
             <v-list-item-title v-html="page.name" />
           </v-list-item-content>
           <!-- Quick Settings Popup -->
-          <v-list-item-icon v-if="page.path === '/settings' && $vuetify.display.smAndUp">
+          <!-- <v-list-item-icon v-if="page.path === '/settings' && $vuetify.display.smAndUp"> -->
             <v-menu
               v-model="showSettings"
               :right="false"
@@ -46,7 +46,7 @@
                 <settings slim @close="showSettings = false" />
               </v-card>
             </v-menu>
-          </v-list-item-icon>
+          <!-- </v-list-item-icon> -->
         </v-list-item>
         <v-divider v-if="page.divider" :key="`${page.path}-divider`" />
       </template>

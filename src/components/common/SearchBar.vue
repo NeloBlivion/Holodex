@@ -38,7 +38,7 @@
       >
         <v-list-item class="ma-n1 py-0 pl-3 pr-1">
           <div class="selected-card-type px-1 py-0 ma-0 rounded text--disabled caption">
-            <v-icon v-if="selection.item.type === 'channel'" x-small>
+            <!-- <v-icon v-if="selection.item.type === 'channel'" x-small>
               {{ icons.mdiYoutube }}
             </v-icon>
             <v-icon v-if="selection.item.type === 'video url'" x-small>
@@ -55,7 +55,7 @@
             </v-icon>
             <v-icon v-if="selection.item.type === 'comments'" x-small>
               {{ mdiCommentSearch }}
-            </v-icon>
+            </v-icon> -->
             {{ i18nItem(selection.item.type) }}
           </div>
 
@@ -64,9 +64,9 @@
           </v-list-item-content>
 
           <v-list-item-action>
-            <v-icon small color="primary accent-2" @click="deleteChip(selection.item)">
+            <!-- <v-icon small color="primary accent-2" @click="deleteChip(selection.item)">
               {{ icons.mdiClose }}
-            </v-icon>
+            </v-icon> -->
           </v-list-item-action>
         </v-list-item>
       </v-card>
@@ -77,7 +77,7 @@
         <v-list-item-content class="py-1 pt-1">
           <v-list-item-subtitle class="text--primary">
             {{ i18nItem(dropdownItem.item.type) }}
-            <v-icon v-if="dropdownItem.item.type === 'channel'" small>
+            <!-- <v-icon v-if="dropdownItem.item.type === 'channel'" small>
               {{ icons.mdiYoutube }}
             </v-icon>
             <v-icon v-if="dropdownItem.item.type === 'video url'" small>
@@ -94,7 +94,7 @@
             </v-icon>
             <v-icon v-if="dropdownItem.item.type === 'comments'" small>
               {{ mdiCommentSearch }}
-            </v-icon>
+            </v-icon> -->
 
             {{ dropdownItem.item.text }}
           </v-list-item-subtitle>
@@ -103,18 +103,18 @@
     </template>
     <template #append-outer>
       <v-btn class="ml-1 append-btn" @click="commitSearch">
-        <v-icon
+        <!-- <v-icon
           key="searchbtn"
           color="secondary"
           v-text="icons.mdiMagnify"
-        />
+        /> -->
       </v-btn>
       <v-btn class="ml-1 append-btn" @click="goToOrToggleAdvanced">
-        <v-icon
+        <!-- <v-icon
           key="advanced"
           color="secondary"
           v-text="mdiFilter"
-        />
+        /> -->
       </v-btn>
     </template>
   </v-autocomplete>

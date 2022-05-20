@@ -1,12 +1,14 @@
 // import { createApp } from "vue";
 import { createVuetify } from "vuetify";
 import themeSet from "@/utils/themes";
-
+import 'vuetify/lib/styles/main.css'
 import enTL from "@/locales/en/ui.yml";
 import vuetifyEn from "vuetify/lib/locale/en.mjs";
 import { dayjs } from "@/utils/time";
 
 import { createI18n, useI18n } from "vue-i18n";
+// import * as icons from "@/utils/icons";
+import * as icons from "@mdi/js";
 
 // import { createVueI18nAdapter } from "vuetify/locale/adapters";
 
@@ -205,9 +207,7 @@ const darkTheme = initThemeDarkMode !== "false"; // true if unset.
 
 export const config = {
     treeShake: true,
-    icons: {
-        iconfont: "mdiSvg",
-    },
+    icons: icons,
     theme: {
         dark: darkTheme,
         options: {
