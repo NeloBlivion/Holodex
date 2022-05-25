@@ -11,6 +11,8 @@ if (process.env.NODE_ENV === 'production') {
   process.env.VITE_APP_BUILD_EPOCH = new Date().getTime().toString()
 }
 
+console.log(__dirname);
+
 export default defineConfig({
   plugins: [
     vue(),
@@ -36,7 +38,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, '/src'),
+      '@': resolve(__dirname, 'src'),
     },
   },
   test: {
