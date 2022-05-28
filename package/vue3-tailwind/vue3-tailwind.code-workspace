@@ -8,7 +8,11 @@
 			"name": "Holodex /src Folder"
 		}
 	],
-	"settings": {},
+	"settings": {
+		"i18n-ally.localesPaths": [
+			"src/locales"
+		]
+	},
 	"extensions": {    "recommendations": [
         "Vue.volar"
     ], "unwantedRecommendations": ["octref.vetur"]

@@ -2,11 +2,11 @@
 import type { LayoutItem } from "@/external/vue-grid-layout/src/helpers/utils";
 import { getFirstCollision } from "@/external/vue-grid-layout/src/helpers/utils";
 import {
- getDesktopDefaults, desktopPresets, mobilePresets, decodeLayout,
+    getDesktopDefaults, desktopPresets, mobilePresets, decodeLayout,
 } from "@/utils/mv-utils";
 import type { Content } from "@/utils/mv-utils";
 import api from "@/utils/backend-api";
-import Vue from "vue";
+// import Vue from "vue";
 import debounce from "lodash-es/debounce";
 import axios from "axios";
 import { CHANNEL_URL_REGEX } from "@/utils/consts";
@@ -215,10 +215,10 @@ const mutations = {
         // Setting is set to true, flip all but one to muted
         if (val) {
             Object.keys(state.layoutContent)
-            .filter((key) => state.layoutContent[key]?.type === "video")
-            .forEach((key, index) => {
-                Vue.set(state.layoutContent[key], "muted", index !== 0);
-            });
+                .filter((key) => state.layoutContent[key]?.type === "video")
+                .forEach((key, index) => {
+                    Vue.set(state.layoutContent[key], "muted", index !== 0);
+                });
         }
     },
     muteOthers: debounce((state, currentKey) => {

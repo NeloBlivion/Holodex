@@ -1,6 +1,6 @@
 /* eslint-disable func-names */
-import Vue from "vue";
-import Vuex from "vuex";
+import { createStore } from "vuex";
+
 import createPersistedState from "vuex-persistedstate";
 import createMutationsSharer from "vuex-shared-mutations";
 import createMigrate from "vuex-persistedstate-migrate";
@@ -24,8 +24,6 @@ import orgs from "./orgs.module";
 import tlclient from "./tlclient.module";
 import { migrations, VUEX_STATE_VERSION } from "./migrations";
 // import socket from "./socket.module";
-
-Vue.use(Vuex);
 
 /**--------------------------------------------
  *               Initial State
@@ -87,7 +85,7 @@ const syncedModules = /^(?:playlist|settings|history)/;
 const syncedMutations = new Set(["resetState", "setUser", "setShowUpdatesDetail", "firstVisit", "firstVisitMugen", "favorites/setFavorites", "favorites/resetFavorites", "favorites/setLive", "multiview/addPresetLayout", "multiview/removePresetLayout", "multiview/togglePresetAutoLayout", "multiview/setAutoLayout"]);
 
 const persistedPaths = ["orgs", "playlist", "settings", "history", "migration", "multiview", "channels.cardView", "channels.sort", "currentOrg", "favorites.favorites", "lastShownInstallPrompt", "firstVisit", "firstVisitMugen", "orgFavorites", "showUpdateDetails", "userdata", "watch.showLiveChat", "watch.showTL", "watch.theaterMode", "currentGridSize"];
-export default new Vuex.Store({
+export default createStore({
     plugins: [
         createPersistedState({
             key: "holodex-v2",

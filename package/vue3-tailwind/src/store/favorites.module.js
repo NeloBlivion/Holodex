@@ -1,7 +1,7 @@
 /* eslint-disable no-shadow */
 import api from "@/utils/backend-api";
 import { sendFavoritesToExtension, sendTokenToExtension } from "@/utils/messaging";
-import Vue from "vue";
+// import Vue from "vue";
 import debounce from "lodash-es/debounce";
 import fdequal from "fast-deep-equal";
 import { videoTemporalComparator } from "@/utils/functions";
@@ -107,7 +107,7 @@ const actions = {
                 }
             })
             .finally(() => commit("clearStagedFavorites"));
-        }, 2000),
+    }, 2000),
 
     async resetFavorites({ dispatch, commit, rootState }) {
         commit("resetState");

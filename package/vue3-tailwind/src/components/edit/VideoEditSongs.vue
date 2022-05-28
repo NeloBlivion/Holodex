@@ -263,9 +263,9 @@
     <v-row dense>
       <v-col cols="12">
         <v-list style="min-height: 30vh">
-          <template v-for="song in songList">
+          <template v-for="song in songList"               :key="song.name"
+>
             <song-item
-              :key="song.name"
               :song="song"
               detailed
               :hover-icon="icons.mdiPencil"
@@ -291,7 +291,6 @@
 import {
     mdiEarHearing, mdiRestore, mdiTimerOutline, mdiDebugStepOver, mdiTimelinePlusOutline, mdiAltimeter,
 } from "@mdi/js";
-import Vue from "vue";
 
 import backendApi from "@/utils/backend-api";
 import { secondsToHuman, formatDuration } from "@/utils/time";

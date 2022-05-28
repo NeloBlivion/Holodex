@@ -4,10 +4,10 @@
 </template>
 
 <script>
-import Vue from "vue";
-import LoadScript from "vue-plugin-load-script";
+// import Vue from "vue";
+// import LoadScript from "vue-plugin-load-script";
 
-Vue.use(LoadScript);
+// Vue.use(LoadScript);
 const googleUrl = "https://accounts.google.com/gsi/client";
 const GOOGLE_CLIENT_ID = "275540829388-87s7f9v2ht3ih51ah0tjkqng8pd8bqo2.apps.googleusercontent.com";
 export default {

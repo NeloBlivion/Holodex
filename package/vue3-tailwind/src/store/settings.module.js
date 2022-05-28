@@ -1,5 +1,5 @@
 /* eslint-disable no-shadow */
-import Vue from "vue";
+// import Vue from "vue";
 import { createSimpleMutation, getUILang, getLang } from "@/utils/functions";
 
 const userLanguage = navigator.language || navigator.userLanguage || "en";

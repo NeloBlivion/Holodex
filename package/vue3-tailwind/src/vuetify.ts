@@ -13,8 +13,8 @@ import { dayjs } from "@/utils/time";
 import { createI18n, useI18n } from "vue-i18n";
 // import * as icons from "@/utils/icons";
 import * as icons from "@mdi/js";
-
-// import { createVueI18nAdapter } from "vuetify/locale/adapters";
+import { createVueI18nAdapter } from 'vuetify/locale/adapters/vue-i18n'
+// import { createVueI18nAdapter } from "vuetify/locale";
 
 // ====== i18n setup ======
 // Vue.use(VueI18n);
@@ -249,5 +249,10 @@ export const config = {
 export const vuetify = createVuetify({
     components,
     directives,
+    locale: createVueI18nAdapter({
+        i18n,
+        useI18n,
+    })
+
 })
 

@@ -1,38 +1,33 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+// import Vue from "vue";
+import { createRouter, createWebHistory } from "vue-router";
 import { loadLanguageAsync } from "@/vuetify";
-import { musicdexURL } from "@/utils/consts";
 import HomeFave from "../views/HomeFave.vue";
-import store from "../store";
+import store from "../store/index";
 
-const Channel = () => import("../views/Channel.vue");
-const Channels = () => import("../views/Channels.vue");
-const ChannelVideos = () => import("../views/channel_views/ChannelVideos.vue");
-const ChannelAbout = () => import("../views/channel_views/ChannelAbout.vue");
-const Watch = () => import("../views/Watch.vue");
-const About = () => import("../views/About.vue");
-const Search = () => import("../views/Search.vue");
-const Library = () => import("../views/Library.vue");
-// const ChannelStats = () => import("../views/channel_views/ChannelStats.vue");
-const Settings = () => import("../views/Settings.vue");
-const NotFound = () => import("../views/NotFound.vue");
-const Login = () => import("../views/Login.vue");
-const EditVideo = () => import("../views/EditVideo.vue");
-const MultiView = () => import("../views/MultiView.vue");
-const Playlists = () => import("../views/Playlists.vue");
-const AddPlaceholderStream = () => import("../views/AddPlaceholderStream.vue");
-const AddChannelRequest = () => import("../views/AddChannelRequest.vue");
+// const Channel = () => import("../views/Channel.vue");
+// const Channels = () => import("../views/Channels.vue");
+// const ChannelVideos = () => import("../views/channel_views/ChannelVideos.vue");
+// const ChannelAbout = () => import("../views/channel_views/ChannelAbout.vue");
+// const ChannelMusic = () => import("../views/channel_views/ChannelMusic.vue");
+// const Watch = () => import("../views/Watch.vue");
+// const About = () => import("../views/About.vue");
+// const Search = () => import("../views/Search.vue");
+// const Library = () => import("../views/Library.vue");
+// // const ChannelStats = () => import("../views/channel_views/ChannelStats.vue");
+// const Settings = () => import("../views/Settings.vue");
+// const NotFound = () => import("../views/NotFound.vue");
+// const Login = () => import("../views/Login.vue");
+// const EditVideo = () => import("../views/EditVideo.vue");
+// const OrgMusic = () => import("../views/OrgMusic.vue");
+// const MultiView = () => import("../views/MultiView.vue");
+// const Playlists = () => import("../views/Playlists.vue");
+// const AddPlaceholderStream = () => import("../views/AddPlaceholderStream.vue");
+// const Extension = () => import("../views/Extension.vue");
 
-const Extension = () => import("../views/Extension.vue");
-
-const TLClient = () => import("../views/TLClient.vue");
-const TLScriptEditor = () => import("../views/TLScriptEditor.vue");
-const TLManager = () => import("../views/TLScriptManager.vue");
-const RelayBotSetting = () => import("../views/RelayBotSetting.vue");
-
-Vue.use(VueRouter);
+// Vue.use(VueRouter);
 
 const routes = [
+    // { path: '/', name: 'home', component: "hi" }
     {
         path: "/",
         name: "home",
@@ -47,153 +42,132 @@ const routes = [
             }
         },
     },
-    {
-        // Backwards compatibility with old home
-        path: "/home",
-        redirect(to) {
-            const { hash, params, query } = to;
-            return {
-                name: "home",
-                hash,
-                params,
-                query,
-            };
-        },
-    },
-    {
-        path: "/favorites/",
-        name: "favorites",
-        component: HomeFave,
-        props: { isFavPage: true },
-    },
-    {
-        path: "/channel/:id",
-        component: Channel,
-        children: [
-            {
-                path: "clips",
-                name: "channel_clips",
-                component: ChannelVideos,
-            },
-            {
-                path: "collabs",
-                name: "channel_collabs",
-                component: ChannelVideos,
-            },
-            {
-                path: "about",
-                name: "channel_about",
-                component: ChannelAbout,
-            },
-            {
-                path: "music",
-                name: "channel_music",
-                beforeEnter(to) {
-                    window.location.replace(`${musicdexURL}/channel/${to.params.id}`);
-                },
-            },
-            {
-                path: "",
-                name: "channel",
-                component: ChannelVideos,
-            },
-        ],
-    },
-    {
-        path: "/channel/",
-        name: "channels",
-        component: Channels,
-    },
-    {
-        name: "watch",
-        path: "/watch/:id?",
-        component: Watch,
-    },
-    {
-        name: "edit_video",
-        path: "/edit/video/:id/:tab?",
-        component: EditVideo,
-    },
-    {
-        name: "add_placeholder",
-        path: "/add_placeholder",
-        component: AddPlaceholderStream,
-    },
-    {
-        name: "multiview",
-        path: "/multiview/:layout?",
-        component: MultiView,
-    },
-    {
-        name: "playlists",
-        path: "/playlists",
-        component: Playlists,
-    },
-    {
-        name: "library",
-        path: "/library",
-        component: Library,
-    },
-    {
-        name: "about",
-        path: "/about",
-        component: About,
-    },
-    {
-        name: "search",
-        path: "/search",
-        component: Search,
-    },
-    {
-        name: "settings",
-        path: "/settings",
-        component: Settings,
-    },
-    {
-        name: "login",
-        path: "/login",
-        component: Login,
-    },
-    {
-        name: "extension",
-        path: "/extension",
-        component: Extension,
-    },
-    {
-        name: "tlclient",
-        path: "/tlclient",
-        component: TLClient,
-    },
-    {
-        name: "scripteditor",
-        path: "/scripteditor",
-        component: TLScriptEditor,
-    },
-    {
-        name: "scriptmanager",
-        path: "/scriptmanager",
-        component: TLManager,
-    },
-    {
-        name: "relaybotsetting",
-        path: "/relaybot",
-        component: RelayBotSetting,
-    },
-    {
-        path: "/404",
-        component: NotFound,
-    },
-    {
-        path: "/addChannel",
-        component: AddChannelRequest,
-    },
-    {
-        path: "*",
-        component: NotFound,
-    },
+    // {
+    //     // Backwards compatibility with old home
+    //     path: "/home",
+    //     redirect(to) {
+    //         const { hash, params, query } = to;
+    //         return {
+    //             name: "home",
+    //             hash,
+    //             params,
+    //             query,
+    //         };
+    //     },
+    // },
+    // {
+    //     path: "/favorites/",
+    //     name: "favorites",
+    //     component: HomeFave,
+    //     props: { isFavPage: true },
+    // },
+    // {
+    //     path: "/channel/:id",
+    //     component: Channel,
+    //     children: [
+    //         {
+    //             path: "clips",
+    //             name: "channel_clips",
+    //             component: ChannelVideos,
+    //         },
+    //         {
+    //             path: "collabs",
+    //             name: "channel_collabs",
+    //             component: ChannelVideos,
+    //         },
+    //         {
+    //             path: "about",
+    //             name: "channel_about",
+    //             component: ChannelAbout,
+    //         },
+    //         {
+    //             path: "music",
+    //             name: "channel_music",
+    //             component: ChannelMusic,
+    //         },
+    //         {
+    //             path: "",
+    //             name: "channel",
+    //             component: ChannelVideos,
+    //         },
+    //     ],
+    // },
+    // {
+    //     path: "/channel/",
+    //     name: "channels",
+    //     component: Channels,
+    // },
+    // {
+    //     path: "/music/",
+    //     name: "music",
+    //     component: OrgMusic,
+    // },
+    // {
+    //     name: "watch",
+    //     path: "/watch/:id?",
+    //     component: Watch,
+    // },
+    // {
+    //     name: "edit_video",
+    //     path: "/edit/video/:id/:tab?",
+    //     component: EditVideo,
+    // },
+    // {
+    //     name: "add_placeholder",
+    //     path: "/add_placeholder",
+    //     component: AddPlaceholderStream,
+    // },
+    // {
+    //     name: "multiview",
+    //     path: "/multiview/:layout?",
+    //     component: MultiView,
+    // },
+    // {
+    //     name: "playlists",
+    //     path: "/playlists",
+    //     component: Playlists,
+    // },
+    // {
+    //     name: "library",
+    //     path: "/library",
+    //     component: Library,
+    // },
+    // {
+    //     name: "about",
+    //     path: "/about",
+    //     component: About,
+    // },
+    // {
+    //     name: "search",
+    //     path: "/search",
+    //     component: Search,
+    // },
+    // {
+    //     name: "settings",
+    //     path: "/settings",
+    //     component: Settings,
+    // },
+    // {
+    //     name: "login",
+    //     path: "/login",
+    //     component: Login,
+    // },
+    // {
+    //     name: "extension",
+    //     path: "/extension",
+    //     component: Extension,
+    // },
+    // {
+    //     path: "/404",
+    //     component: NotFound,
+    // },
+    // {
+    //     path: "/:pathMatch(.*)*",
+    //     component: NotFound,
+    // },
 ];
 
-const router = new VueRouter({
+const router = createRouter({
     mode: "history",
     base: import.meta.env.BASE_URL,
     routes,
@@ -208,6 +182,7 @@ const router = new VueRouter({
         }
         return savedPosition || { x: 0, y: 0 };
     },
+    history: createWebHistory()
 });
 
 router.beforeEach((to, from, next) => {
@@ -229,7 +204,7 @@ router.beforeEach((to, from, next) => {
     }
 
     if (actualLang !== "en") {
-        // loadLanguageAsync(actualLang).then(() => next());
+        loadLanguageAsync(actualLang).then(() => next());
     } else { next(); }
 });
 

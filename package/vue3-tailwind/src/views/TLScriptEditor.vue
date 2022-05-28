@@ -3,7 +3,7 @@
     fill-height
     fluid
     style="max-height: 100vh; padding: 0px 12px"
-    @keydown.ctrl.83.exact.prevent="processLog()"
+    @keydown.ctrl.s.exact.prevent="processLog()"
   >
     <div class="d-flex flex-column" style="height: 100%; width:100%">
       <v-system-bar height="30" class="tl-topbar px-0" color="secondary">
@@ -613,7 +613,7 @@ import { mdiPlay, mdiStop, mdiCog, mdiCogOff, mdiKeyboard } from "@mdi/js";
 import { getVideoIDFromUrl, videoCodeParser } from "@/utils/functions";
 import backendApi from "@/utils/backend-api";
 
-import Vue from "vue";
+// import Vue from "vue";
 import LoadScript from "vue-plugin-load-script";
 
 Vue.use(LoadScript);
@@ -919,7 +919,7 @@ export default {
             }
         }, 33);
     },
-    beforeDestroy() {
+    beforeUnmount() {
         this.unloadVideo();
         window.removeEventListener("resize", this.onResize);
         if (this.loggerTimer) {
@@ -954,7 +954,7 @@ export default {
                 Profile: this.profileIdx,
             };
 
-            let inserted:boolean = false;
+            let inserted = false;
             for (let i = 0; i < this.entries.length; i += 1) {
                 if (this.entries[i].Time > dt.Time) {
                     if (i > 0) {
@@ -1863,7 +1863,7 @@ export default {
             }
             return ((this.entries[this.timecardIdx[index]].Duration / 1000) * this.secToPx);
         },
-        secToTimeString(secInput: number, msOutput: boolean = true, Full: boolean = false): string {
+        secToTimeString(secInput: number, msOutput = true, Full = false): string {
             let Sec = secInput;
             let MS:string = Math.floor((Sec % 1) * 100).toString();
             if (MS.length === 1) {

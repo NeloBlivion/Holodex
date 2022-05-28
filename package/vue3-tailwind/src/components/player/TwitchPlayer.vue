@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import Vue from "vue";
 import LoadScript from "vue-plugin-load-script";
 import PlayerMixin from "./PlayerMixin";
 
@@ -58,7 +57,7 @@ export default {
             this.player.setMuted(value);
         },
     },
-    beforeDestroy() {
+    beforeUnmount() {
         if (this.player !== null) {
             this.$emit("paused");
             delete this.player;

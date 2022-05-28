@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 // import api from "@/utils/backend-api";
-import Vue from "vue";
+// import Vue from "vue";
 // import { CHANNEL_TYPES } from "@/utils/consts";
 
 const initialState = {
