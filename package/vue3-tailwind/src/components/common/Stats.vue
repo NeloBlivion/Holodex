@@ -7,7 +7,7 @@
     xl="8"
   >
     <v-card
-      :class="$vuetify.breakpoint.mobile ? 'flex-column' : null"
+      :class="$vuetify?.breakpoint?.mobile ? 'flex-column' : null"
       class="d-flex justify-center align-center justify-space-around pt-5 pb-5"
     >
       <!-- VTUBERS -->
@@ -31,7 +31,7 @@
       <!-- SUBBERS -->
       <div
         class="flex-center"
-        :class="$vuetify.breakpoint.mobile ? 'mt-5' : null"
+        :class="$vuetify?.breakpoint?.mobile ? 'mt-5' : null"
         :style="{ 'width' : getWidth(s.channelCount.subber || 0) }"
       >
         <div
@@ -50,7 +50,7 @@
       <!-- VIDEOS -->
       <div
         class="flex-center"
-        :class="$vuetify.breakpoint.mobile ? 'mt-5' : null"
+        :class="$vuetify?.breakpoint?.mobile ? 'mt-5' : null"
         :style="{ 'width' : getWidth(s.totalVideos.count || 0) }"
       >
         <div
@@ -69,7 +69,7 @@
       <!-- SONGS -->
       <div
         class="flex-center"
-        :class="$vuetify.breakpoint.mobile ? 'mt-5' : null"
+        :class="$vuetify?.breakpoint?.mobile ? 'mt-5' : null"
         :style="{ 'width' : getWidth(s.totalSongs.count || 0) }"
       >
         <div

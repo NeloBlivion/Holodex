@@ -30,7 +30,7 @@
             <v-list-item-title v-html="page.name" />
           </v-list-item-content>
           <!-- Quick Settings Popup -->
-          <v-list-item-icon v-if="page.path === '/settings' && $vuetify.breakpoint.smAndUp">
+          <v-list-item-icon v-if="page.path === '/settings' && $vuetify?.breakpoint?.smAndUp">
             <v-menu
               v-model="showSettings"
               :right="false"

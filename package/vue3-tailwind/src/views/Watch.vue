@@ -9,7 +9,7 @@
     class="d-flex flex-row watch-layout"
     :class="{
       'mobile': isMobile,
-      'theater-mode': video.type === 'stream' || $vuetify.breakpoint.mdAndDown,
+      'theater-mode': video.type === 'stream' || $vuetify?.breakpoint?.mdAndDown,
       'show-chat': showChatWindow,
       'full-height': theaterMode,
       'show-highlights-bar': showHighlightsBar

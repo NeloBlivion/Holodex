@@ -320,9 +320,9 @@ export default {
             "defaultOpen",
         ]),
         currentCol() {
-            if (this.$vuetify.breakpoint.smAndDown) return 12;
-            if (this.$vuetify.breakpoint.md) return 6;
-            if (this.$vuetify.breakpoint.lgAndUp) return 4;
+            if (this.$vuetify?.breakpoint?.smAndDown) return 12;
+            if (this.$vuetify?.breakpoint?.md) return 6;
+            if (this.$vuetify?.breakpoint?.lgAndUp) return 4;
             return null;
         },
         currentGridSize: {

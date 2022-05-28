@@ -292,6 +292,7 @@ import {
     mdiEarHearing, mdiRestore, mdiTimerOutline, mdiDebugStepOver, mdiTimelinePlusOutline, mdiAltimeter,
 } from "@mdi/js";
 
+
 import backendApi from "@/utils/backend-api";
 import { secondsToHuman, formatDuration } from "@/utils/time";
 import SongSearch from "../media/SongSearch.vue";
@@ -488,7 +489,8 @@ export default {
             const self = this as any;
             await self.saveCurrentSong();
             // this.songList.push(this.current);
-            Vue.set(self, "current", getEmptySong(self.video));
+            this.current = getEmptySong(self.video);
+            // Vue.set(self, "current", getEmptySong(self.video));
             self.$refs.search.query = null;
             await self.refreshSongList();
         },

@@ -252,7 +252,6 @@ export const vuetify = createVuetify({
     locale: createVueI18nAdapter({
         i18n,
         useI18n,
-    })
-
+    }),
 })
 

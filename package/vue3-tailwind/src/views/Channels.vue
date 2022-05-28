@@ -6,7 +6,7 @@
     }"
     style="min-height: 70vh"
   >
-    <portal to="mainNavExt" :disabled="!$vuetify.breakpoint.xs || !isActive">
+    <portal to="mainNavExt" :disabled="!$vuetify?.breakpoint?.xs || !isActive">
       <v-tabs v-if="isActive" v-model="category" class="channels-tabs secondary darken-1">
         <v-tab>{{ $t("views.channels.tabs.Vtuber") }}</v-tab>
         <v-tab>{{ $t("views.channels.tabs.Subber") }}</v-tab>

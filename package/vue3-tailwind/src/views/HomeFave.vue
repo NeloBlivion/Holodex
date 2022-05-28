@@ -17,10 +17,10 @@
     class="d-flex flex-column"
   >
     <!-- Teleport tabs to nav extension slot -->
-    <portal to="mainNavExt" :disabled="!$vuetify.breakpoint.xs || !isActive" style="position: sticky; top: 56px; z-index: 2">
+    <portal to="mainNavExt" :disabled="!$vuetify?.breakpoint?.xs || !isActive" style="position: sticky; top: 56px; z-index: 2">
       <v-tabs
         v-model="tab"
-        :centered="$vuetify.breakpoint.xs"
+        :centered="$vuetify?.breakpoint?.xs"
         :class="$store.state.settings.darkMode ? 'secondary darken-1' : 'primary lighten-1'"
         :active-class="
           $store.state.settings.darkMode ? 'primary--text text--lighten-3' : 'primary--text text--darken-2'
@@ -43,7 +43,7 @@
         <v-tab class="pa-2">
           {{ $t("views.home.recentVideoToggles.subber") }}
         </v-tab>
-        <portal-target v-if="!$vuetify.breakpoint.xs" :name="`date-selector${isFavPage}`" class=" v-tab ml-auto" />
+        <portal-target v-if="!$vuetify?.breakpoint?.xs" :name="`date-selector${isFavPage}`" class=" v-tab ml-auto" />
       </v-tabs>
     </portal>
 

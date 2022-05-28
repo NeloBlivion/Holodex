@@ -140,7 +140,7 @@ export default {
     },
     computed: {
         isTooSmall() {
-            return this.$vuetify.breakpoint.width < 700;
+            return this.$vuetify?.breakpoint?.width < 700;
         },
         videoWithMentions() {
             return { ...this.video, mentions: this.mentions };
