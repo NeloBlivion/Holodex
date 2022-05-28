@@ -30,15 +30,16 @@
     style="min-width: 0px"
   >
     <v-icon>
-      {{ icons.mdiAccountCircleOutline }}
+      <!-- {{ icons.mdiAccountCircleOutline }}  --> 
+      <!-- MIGRATION NOTES: Remove ICON TEMPORARILY -->
     </v-icon>
   </v-avatar>
 </template>
 
 <script lang="ts">
-import { getChannelPhoto } from "@/utils/functions";
+import { getChannelPhoto } from "@/utils/functions"; // MIGRATION NOTES: Converted the Function call to Typescript
 
-export default {
+export default defineComponent({ // MIGRATION NOTES: wrap the {} in defineComponent
     name: "ChannelImg",
     props: {
         channel: {
@@ -69,17 +70,17 @@ export default {
     },
     computed: {
         photo() {
-            return getChannelPhoto(this.channel.id, this.size);
+            return getChannelPhoto(this.channel.id, +this.size); // MIGRATION NOTES: this.size => +this.size since size is string|number and we cast it to number.
         },
     },
     methods: {
-        goToChannel(e) {
+        goToChannel(e: { stopImmediatePropagation: () => void; }) { // MIGRATION NOTES: automatically inferred type of 'e'.
             if (this.noLink) return;
             e.stopImmediatePropagation();
             this.$router.push({ path: `/channel/${this.channel.id}` });
         },
     },
-};
+});
 </script>
 
 <style scoped>
