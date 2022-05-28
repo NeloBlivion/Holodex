@@ -5,7 +5,6 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    3PCookieDetect: typeof import('./src/components/common/3PCookieDetect.vue')['default']
     ApiErrorMessage: typeof import('./src/components/common/ApiErrorMessage.vue')['default']
     ArchiveTranslations: typeof import('./src/components/chat/ArchiveTranslations.vue')['default']
     BottomNav: typeof import('./src/components/nav/BottomNav.vue')['default']
@@ -16,7 +15,6 @@ declare module '@vue/runtime-core' {
     ChannelCard: typeof import('./src/components/channel/ChannelCard.vue')['default']
     ChannelChip: typeof import('./src/components/channel/ChannelChip.vue')['default']
     ChannelImg: typeof import('./src/components/channel/ChannelImg.vue')['default']
-    ChannelImg2: typeof import('./src/components/channel/ChannelImg2.vue')['default']
     ChannelInfo: typeof import('./src/components/channel/ChannelInfo.vue')['default']
     ChannelList: typeof import('./src/components/channel/ChannelList.vue')['default']
     ChannelMentions: typeof import('./src/components/channel/ChannelMentions.vue')['default']
@@ -34,7 +32,6 @@ declare module '@vue/runtime-core' {
     ExportToFile: typeof import('./src/components/tlscripteditor/ExportToFile.vue')['default']
     GenericListLoader: typeof import('./src/components/video/GenericListLoader.vue')['default']
     GoogleSignInButton: typeof import('./src/components/common/GoogleSignInButton.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     ImportFile: typeof import('./src/components/tlscripteditor/ImportFile.vue')['default']
     ImportMchad: typeof import('./src/components/tlscriptmanager/ImportMchad.vue')['default']
     InfiniteLoad: typeof import('./src/components/common/InfiniteLoad.vue')['default']
@@ -77,6 +74,7 @@ declare module '@vue/runtime-core' {
     SongItemCard: typeof import('./src/components/media/SongItemCard.vue')['default']
     SongSearch: typeof import('./src/components/media/SongSearch.vue')['default']
     Stats: typeof import('./src/components/common/Stats.vue')['default']
+    ThirdPCookieDetect: typeof import('./src/components/common/ThirdPCookieDetect.vue')['default']
     TruncatedText: typeof import('./src/components/common/TruncatedText.vue')['default']
     TwitchPlayer: typeof import('./src/components/player/TwitchPlayer.vue')['default']
     TwitterFeed: typeof import('./src/components/common/TwitterFeed.vue')['default']
@@ -108,4 +106,4 @@ declare module '@vue/runtime-core' {
   }
 }
 
-export {}
+export {  }
