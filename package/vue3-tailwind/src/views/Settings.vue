@@ -255,7 +255,6 @@ import {
 import { TL_LANGS } from "@/utils/consts";
 import themeSet from "@/utils/themes";
 import { syncState } from "@/utils/functions";
-import Vue from "vue";
 import backendApi from "@/utils/backend-api";
 import VideoListFilters from "@/components/setting/VideoListFilters.vue";
 

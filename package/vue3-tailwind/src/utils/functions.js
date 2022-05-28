@@ -1,4 +1,5 @@
-import { TL_LANGS,
+import {
+    TL_LANGS,
     VIDEO_URL_REGEX,
     TWITCH_VIDEO_URL_REGEX,
     /*
@@ -12,7 +13,7 @@ import { TL_LANGS,
     */
 } from "@/utils/consts";
 
-import { langs } from "@/plugins/vuetify";
+import { langs } from "@/vuetify";
 
 export function resizeArtwork(artworkUrl, size = 400) {
     // https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/9c/39/27/9c392780-3f34-d322-9dde-002618154f40/source/400x400bb.jpg
@@ -240,7 +241,7 @@ export function videoTemporalComparator(a, b) {
  * @param {String} url - A video url
  * @returns {Object}
  */
- export function getVideoIDFromUrl(url) {
+export function getVideoIDFromUrl(url) {
     if (VIDEO_URL_REGEX.test(url)) {
         const match = url.match(VIDEO_URL_REGEX);
         if (match && match[5] && match[5].length === 11) {

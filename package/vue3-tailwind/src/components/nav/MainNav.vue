@@ -58,7 +58,7 @@
 
         <!--================= Account [👤] Button (Desktop Only) ================-->
 
-        <ResponsiveMenu
+        <v-menu
           :close-on-content-click="false"
           offset-y
           :item-count="$store.state.playlist.active.videos.length || 0"
@@ -82,7 +82,7 @@
               </router-link>
             </div>
           </edit-playlist>
-        </ResponsiveMenu>
+        </v-menu>
         <v-menu
           v-if="!isMobile"
           left
@@ -164,29 +164,14 @@
 </template>
 
 <script lang="ts">
-import SearchBar from "@/components/common/SearchBar.vue";
-import Logo from "@/components/common/Logo.vue";
-import OrgSelector from "@/components/common/OrgSelector.vue";
-import UserCard from "@/components/user/UserCard.vue";
 import { mapState } from "vuex";
 import hideExtensionOnScroll from "@/mixins/hideExtensionOnScroll";
-import EditPlaylist from "@/components/playlist/EditPlaylist.vue";
-import ResponsiveMenu from "@/components/common/ResponsiveMenu.vue";
 import { musicdexURL } from "@/utils/consts";
 import NavDrawer from "./NavDrawer.vue";
 import BottomNav from "./BottomNav.vue";
 
 export default {
     components: {
-        SearchBar,
-        NavDrawer,
-        BottomNav,
-        UserCard,
-        Logo,
-        // InstallPrompt,
-        OrgSelector,
-        EditPlaylist,
-        ResponsiveMenu,
     },
     mixins: [hideExtensionOnScroll],
     data() {

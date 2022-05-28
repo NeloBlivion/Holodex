@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.6.3",
+    "@rollup/plugin-yaml": "^3.1.0",
     "@vueuse/core": "^8.5.0",
     "@vueuse/head": "~0.7",
     "daisyui": "^2.15.1",
@@ -22,6 +23,8 @@
     "vue": "~3.2",
     "vue-query": "^1.25.0",
     "vue-router": "~4.0",
+    "vue-i18n": "^9.2.0-beta.35",
+
     "vuetify": "^3.0.0-beta.2"
   },
   "devDependencies": {

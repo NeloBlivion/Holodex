@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import pkg from './package.json'
+import yaml from "@rollup/plugin-yaml";
 
 process.env.VITE_APP_VERSION = pkg.version
 if (process.env.NODE_ENV === 'production') {
@@ -18,6 +19,7 @@ console.log(__dirname);
 
 export default defineConfig({
   plugins: [
+    yaml(),
     vue(),
     AutoImport({
       imports: [

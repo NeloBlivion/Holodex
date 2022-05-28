@@ -78,9 +78,9 @@
           </v-icon>
         </v-avatar> -->
 
-        <template v-for="item in mentions">
+        <template v-for="item in mentions"             :key="item.id + 'chip'"
+>
           <ChannelChip
-            :key="item.id + 'chip'"
             :channel="item"
             :size="60"
             :close-delay="0"
@@ -107,7 +107,7 @@
         </template>
         <v-autocomplete
           v-model="fake"
-          :search-input.sync="search"
+          v-model:search-input="search"
           :items="searchResults"
           hide-no-data
           multiple
@@ -252,7 +252,7 @@ export default {
         this.updateMentions();
         this.updateCurrentTopic();
     },
-    beforeDestroy() {},
+    beforeUnmount() {},
     methods: {
         updateCurrentTopic() {
             backendApi.getVideoTopic(this.video.id).then(({ data }) => {
