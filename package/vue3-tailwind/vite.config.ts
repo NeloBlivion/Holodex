@@ -11,6 +11,9 @@ if (process.env.NODE_ENV === 'production') {
   process.env.VITE_APP_BUILD_EPOCH = new Date().getTime().toString()
 }
 
+const API_BASE_URL = process.env.API_BASE_URL ?? "https://staging.holodex.net";
+const REWRITE_API_ROUTES = !!process.env.REWRITE_API_ROUTES;
+
 console.log(__dirname);
 
 export default defineConfig({
@@ -43,5 +46,27 @@ export default defineConfig({
   },
   test: {
     include: ['tests/unit/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+  },
+  server: {
+    port: 8080,
+    proxy: {
+      "/api": {
+        target: API_BASE_URL,
+        changeOrigin: true,
+        secure: false,
+        ws: true,
+        rewrite: (url) => (REWRITE_API_ROUTES ? url.replace(/^\/api/, "") : url),
+      },
+      "^/(stats|orgs).json$": {
+        target: API_BASE_URL,
+        changeOrigin: true,
+        secure: false,
+      },
+      "/statics": {
+        target: API_BASE_URL,
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
 })

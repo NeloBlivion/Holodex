@@ -20,6 +20,7 @@
         <div class="p-4 mx-auto prose md:px-6 prose-indigo sm:rounded-md">
           Channel image: 
           <ChannelImg :channel="channel"/>
+          <ChannelImg2 :channel="channel"/>
         </div>
       </main>
       <footer class="py-6 text-sm text-center text-gray-700">
