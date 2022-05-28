@@ -162,7 +162,7 @@ export default {
         },
         syncThemeColor() {
             const themeColor = this.$vuetify.theme.themes.dark.secondary;
-            window.document.head.querySelector<HTMLMetaElement>("meta[name=theme-color]").content = themeColor;
+            // window.document.head.querySelector<HTMLMetaElement>("meta[name=theme-color]").content = themeColor;
         },
     },
 };
