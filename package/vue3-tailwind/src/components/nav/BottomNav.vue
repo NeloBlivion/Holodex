@@ -8,9 +8,8 @@
     :scroll-threshold="10000"
     class="bottom-nav"
   >
-    <template v-for="page in pages">
+    <template v-for="page in pages"         :key="page.name">
       <v-btn
-        :key="page.name"
         :value="page.path"
         :to="page.path"
         class="nav-btn"

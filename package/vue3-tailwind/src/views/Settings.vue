@@ -239,7 +239,7 @@
 </template>
 
 <script lang="ts">
-import { langs } from "@/plugins/vuetify";
+import { langs } from "@/vuetify";
 import {
     mdiFilterOutline,
     mdiEarth,

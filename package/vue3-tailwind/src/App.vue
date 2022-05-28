@@ -20,12 +20,7 @@
 </template>
 
 <script lang="ts">
-import MainNav from "@/components/nav/MainNav.vue";
-import ReportDialog from "@/components/common/ReportDialog.vue";
-import PullToRefresh from "@/components/common/PullToRefresh.vue";
-import PWAUpdate from "@/components/common/PWAUpdate.vue";
-import InstallPrompt from "@/components/common/InstallPrompt.vue";
-import { loadLanguageAsync } from "./plugins/vuetify";
+import { loadLanguageAsync } from "./vuetify";
 import { axiosInstance } from "./utils/backend-api";
 
 export default {
@@ -33,13 +28,6 @@ export default {
     // default meta info
     metaInfo: {
         title: "Holodex",
-    },
-    components: {
-        MainNav,
-        ReportDialog,
-        PullToRefresh,
-        PWAUpdate,
-        InstallPrompt,
     },
     data() {
         return {

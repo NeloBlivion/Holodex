@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import { loadLanguageAsync } from "@/plugins/vuetify";
+import { loadLanguageAsync } from "@/vuetify";
 import { musicdexURL } from "@/utils/consts";
 import HomeFave from "../views/HomeFave.vue";
 import store from "../store";
@@ -229,7 +229,7 @@ router.beforeEach((to, from, next) => {
     }
 
     if (actualLang !== "en") {
-        loadLanguageAsync(actualLang).then(() => next());
+        // loadLanguageAsync(actualLang).then(() => next());
     } else { next(); }
 });
 

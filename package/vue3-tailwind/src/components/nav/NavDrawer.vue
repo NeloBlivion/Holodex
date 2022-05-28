@@ -12,9 +12,9 @@
     <slot />
     <v-list dense class="pb-0">
       <!-- <v-list> -->
-      <template v-for="page in pages.filter(e => !e.extra)">
+      <template v-for="page in pages.filter(e => !e.extra)"           :key="page.name"
+>
         <v-list-item
-          :key="page.name"
           link
           :href="page.path"
           :class="{ 'v-list-item--active': $route.fullPath === page.path }"
@@ -145,10 +145,10 @@
   </v-navigation-drawer>
 </template>
 
-<script lang="ts">
+<script>
 import ChannelImg from "@/components/channel/ChannelImg.vue";
 import ChannelInfo from "@/components/channel/ChannelInfo.vue";
-import { langs } from "@/plugins/vuetify";
+import { langs } from "@/vuetify";
 import { dayjs, formatDurationShort } from "@/utils/time";
 import { mdiTuneVariant, mdiPatreon, mdiChevronUp, mdiChevronDown } from "@mdi/js";
 import Settings from "@/views/Settings.vue";
@@ -250,7 +250,7 @@ export default {
             }, 60000);
         }
     },
-    beforeDestroy() {
+    beforeUnmount() {
         if (this.ticker) clearInterval(this.ticker);
     },
     methods: {
