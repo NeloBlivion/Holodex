@@ -10,6 +10,7 @@
     deletable-chips
     chips
     disable-lookup
+    v-model:search-input="search"
     clearable
     hide-no-data
     hide-selected
@@ -20,8 +21,6 @@
     :small-chips="dense"
     :loading="isLoading"
     :items="results"
-    :search-input.sync="search"
-    :append-icon="''"
     :label="$t('component.search.searchLabel')"
     :filter="(a, b) => true"
     return-object

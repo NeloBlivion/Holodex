@@ -9,7 +9,6 @@
         hide-details
         style="flex-basis: 80"
         class="flex-shrink flex-grow pt-0 mt-0"
-        :append-icon="icons.mdiPencil"
         :rules="[(v) => v.length > 0 || 'Should not be empty']"
         @keydown.enter="editNameMode = false"
         @click:append="editNameMode = false"

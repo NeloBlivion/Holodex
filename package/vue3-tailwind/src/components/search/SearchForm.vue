@@ -15,7 +15,6 @@
               :items="orgs"
               item-text="name"
               :label="$t('component.search.type.org')"
-              :prepend-icon="mdiAccountMultiple"
               @focus="loadOrgs"
             />
           </v-col>
@@ -28,23 +27,21 @@
               hide-details="auto"
               :label="$t('component.search.type.topic')"
               solo-inverted
-              :prepend-icon="icons.mdiAnimationPlay"
             />
           </v-col>
 
           <v-col cols="12">
             <v-autocomplete
               v-model="channels"
+              v-model:search-input="channelSearch"
               chips
               clearable
               deletable-chips
               hide-details="auto"
               hide-no-data
               :label="$t('component.search.type.channel')"
-              :prepend-icon="icons.mdiYoutube"
               :loading="channelLoading"
               :items="channelResultsFinal"
-              :search-input.sync="channelSearch"
               no-filter
               multiple
               solo-inverted
@@ -60,7 +57,6 @@
               clearable
               hide-details="auto"
               :label="$t('component.search.type.titledesc')"
-              :prepend-icon="mdiTextSearch"
               :solo-inverted="!commentIsFilled"
               :outlined="commentIsFilled"
               :disabled="commentIsFilled"
@@ -73,7 +69,6 @@
               clearable
               hide-details="auto"
               :label="$t('component.search.type.comments')"
-              :prepend-icon="mdiCommentSearch"
               :solo-inverted="!titleIsFilled"
               :outlined="titleIsFilled"
               :disabled="titleIsFilled"

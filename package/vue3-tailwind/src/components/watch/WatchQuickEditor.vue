@@ -164,7 +164,6 @@
           inline
           hide-details
           label="Topic (leave empty to unset)"
-          :append-outer-icon="mdiContentSave"
           @click="loadTopics"
           @click:append-outer="saveTopic"
         />

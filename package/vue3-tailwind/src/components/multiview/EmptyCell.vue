@@ -42,7 +42,7 @@
         </v-btn>
       </div>
     </div>
-    <CellControl :play-icon="icons.mdiPlay" class="mx-1 mb-2" @delete="deleteCell" />
+    <CellControl  class="mx-1 mb-2" @delete="deleteCell" />
   </div>
 </template>
 

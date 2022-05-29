@@ -7,7 +7,7 @@
       height="24"
       viewBox="0 0 24 24"
     >
-      <path :d="icons.mdiRefresh" />
+      <!-- <path :d="icons.mdiRefresh" /> -->
       <!-- <path d="M0 0h24v24H0z" fill="none" /> -->
     </svg>
     <svg
@@ -77,7 +77,7 @@ export default {
             },
         });
     },
-    beforeDestroy() {
+    beforeUnmount() {
         this.destroyCb();
     },
 };

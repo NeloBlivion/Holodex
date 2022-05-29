@@ -8,7 +8,6 @@
         <v-file-input
           ref="fileInput"
           accept=".ass, .TTML, .srt"
-          :prepend-icon="mdiFileDocument"
           outlined
           dense
           @change="fileChange"

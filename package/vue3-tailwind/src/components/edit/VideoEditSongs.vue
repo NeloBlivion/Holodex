@@ -268,8 +268,6 @@
             <song-item
               :song="song"
               detailed
-              :hover-icon="icons.mdiPencil"
-              :artwork-hover-icon="icons.mdiPlay"
               @remove="removeSong"
               @play="
                 (x) => {

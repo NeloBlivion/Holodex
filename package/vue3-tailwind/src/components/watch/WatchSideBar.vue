@@ -35,7 +35,6 @@
                 :key="song.name + song.video_id + idx"
                 :detailed="showDetailed"
                 :song="song"
-                :hover-icon="icons.mdiPlay"
                 style="width: 100%"
                 @play="$emit('timeJump', song.start)"
                 @playNow="$emit('timeJump', song.start)"

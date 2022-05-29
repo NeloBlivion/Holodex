@@ -77,7 +77,7 @@
               hide-details
               :class="doneCopy ? 'green lighten-2' : ''"
               :value="exportURL"
-              :append-icon="mdiClipboardPlusOutline"
+              append-icon="mdi-clipboard-plus-outline"
               @click:append.stop="startCopyToClipboard(exportURL)"
             />
           </v-card-text>

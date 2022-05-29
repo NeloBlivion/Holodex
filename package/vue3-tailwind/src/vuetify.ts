@@ -14,7 +14,7 @@ import { createI18n, useI18n } from "vue-i18n";
 // import * as icons from "@/utils/icons";
 import * as icons from "@mdi/js";
 import { createVueI18nAdapter } from 'vuetify/locale/adapters/vue-i18n'
-import EmptyComponent from "@/components/EmptyComponent"
+import EmptyComponent from "@/components/EmptyComponent.vue"
 // import { createVueI18nAdapter } from "vuetify/locale";
 
 // ====== i18n setup ======
@@ -248,7 +248,7 @@ export const config = {
 //     Vue.directive(toKebabCase(directive), VuetifyDirectives[directive]);
 // });
 export const vuetify = createVuetify({
-    components: { ...components, 'VIcon': EmptyComponent },
+    components: { ...components, 'VIcon': EmptyComponent, 'v-icon': EmptyComponent },
     directives,
     locale: createVueI18nAdapter({
         i18n,
@@ -256,3 +256,5 @@ export const vuetify = createVuetify({
     }),
 })
 
+console.log(components);
+console.log(EmptyComponent);

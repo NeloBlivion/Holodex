@@ -386,8 +386,6 @@
             v-for="(AuxLink, index) in collabLinks"
             :key="index"
             v-model="collabLinks[index]"
-            :append-outer-icon="mdiPlusCircle"
-            :prepend-icon="mdiMinusCircle"
             style="margin-left: 17px"
             @click:prepend="deleteAuxLink(index)"
             @click:append-outer="collabLinks.push('');"

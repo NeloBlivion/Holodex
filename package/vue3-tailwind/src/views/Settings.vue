@@ -38,7 +38,6 @@
               v-model="language"
               :items="langs"
               item-value="val"
-              :prepend-icon="icons.mdiTranslate"
               :hint="'» ' + langs.find(x => x.val === language).credit"
               persistent-hint
             >
@@ -66,10 +65,10 @@
                 color="orange accent-3"
                 elevation="10"
                 class="mt-3 mb-1"
-                :icon="mdiGestureTap"
                 style="cursor:pointer;"
                 @click="overrideLanguage = undefined"
               >
+              <!--                 :icon="mdiGestureTap" -->
                 Language is being overridden to <code>{{ langs.find(x => x.val === overrideLanguage).display }}</code>, click here to reset.
               </v-alert>
             </v-hover>
@@ -122,7 +121,6 @@
               :label="$t('views.settings.darkModeLabel')"
               hide-details
               inset
-              :prepend-icon="mdiWeatherNight"
             />
             <!-- :messages="$t('views.settings.darkModeMsg')" -->
             <div class="mt-6">
@@ -200,7 +198,6 @@
             <v-switch
               v-model="scrollMode"
               class="v-input--reverse v-input--expand mt-6"
-              :prepend-icon="scrollMode? mdiArrowExpandVertical:mdiBookOpenPageVariantOutline"
               inset
               :label="$t('views.settings.scrollModeLabel')"
               :messages="$t('views.settings.scrollModeMsg')"
@@ -208,7 +205,6 @@
             <v-switch
               v-model="redirectMode"
               class="v-input--reverse v-input--expand mt-6"
-              :prepend-icon="icons.mdiYoutube"
               inset
               :label="$t('views.settings.redirectModeLabel')"
               :messages="$t('views.settings.redirectModeMsg')"

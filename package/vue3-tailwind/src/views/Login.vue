@@ -81,7 +81,7 @@
             hide-details
             :class="doneCopy ? 'green lighten-2' : ''"
             :value="userdata.user.api_key || 'None on file'"
-            :append-icon="icons.mdiClipboardPlusOutline"
+            append-icon="mdi-clipboard-plus-outline"
             @click:append="copyToClipboard(userdata.user.api_key)"
           />
           <br>

@@ -94,7 +94,6 @@
     <!-- Edit mode cell controls -->
     <CellControl
       v-else
-      :play-icon="icons.mdiCheck"
       @playpause="editMode = false"
       @back="resetCell"
       @delete="deleteCell"

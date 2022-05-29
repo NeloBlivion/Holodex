@@ -236,7 +236,6 @@
             <v-text-field
               v-model="blacklistInput"
               label="Translator Name"
-              :append-icon="mdiPlusCircle"
               @click:append="addBlacklist()"
               @keypress.enter="addBlacklist()"
             />
@@ -279,7 +278,6 @@
             <v-text-field
               v-model="whitelistInput"
               label="Translator Name"
-              :append-icon="mdiPlusCircle"
               @click:append="addWhitelist();"
               @keypress.enter="addWhitelist();"
             />

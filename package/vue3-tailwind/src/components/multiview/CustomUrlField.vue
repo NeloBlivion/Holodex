@@ -1,13 +1,13 @@
 <template>
   <v-autocomplete
     ref="vAutocompleteREF"
-    :search-input.sync="url"
+    v-model:search-input="url"
     :label="slim ? hint : label"
     :hint="hint"
     :error="error"
     :hide-details="slim"
     :solo="slim"
-    :append-outer-icon="icons.mdiCheck"
+    append-outer-icon="mdi-check"
     :color="(url && !error) ? 'green' : (error ? 'warning' : '')"
     clearable
     disable-lookup

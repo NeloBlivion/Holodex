@@ -51,7 +51,6 @@
                   key="x921a"
                   v-model="id"
                   label="Placeholder ID (11 characters)"
-                  :append-outer-icon="icons.mdiCheck"
                   clearable
                   @click:append-outer="loadExistingPlaceholder(id)"
                 />
@@ -137,8 +136,6 @@
                         v-bind="attrs"
                         :rules="[requiredRule, timeRule]"
                         hint="YYYY-MM-DD"
-                        :append-icon="icons.mdiPlusBox"
-                        :prepend-inner-icon="mdiMinusBox"
                         @click:append="changeDate(1, 'day')"
                         @click:prepend-inner="changeDate(-1, 'day')"
                         v-on="on"
@@ -154,8 +151,6 @@
                     type="time"
                     required
                     :rules="[requiredRule, timeRule]"
-                    :append-icon="icons.mdiPlusBox"
-                    :prepend-inner-icon="mdiMinusBox"
                     @click:append="changeDate(1, 'hour')"
                     @click:prepend-inner="changeDate(-1, 'hour')"
                   />

@@ -86,7 +86,7 @@
           <v-select
             v-model="sortModel"
             class="d-inline-flex align-self-center mt-n1"
-            :prepend-inner-icon="mdiSort"
+            prepend-inner-icon="mdi-sort"
             :items="sortby"
             dense
             filled
