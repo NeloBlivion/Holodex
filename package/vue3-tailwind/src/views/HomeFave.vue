@@ -49,9 +49,9 @@
 
     <template v-if="isFavPage && !(isLoggedIn && favoriteChannelIDs.size > 0)">
       <div class="ma-auto d-flex flex-column align-center">
-        <v-icon color="primary" large>
+        <!-- <v-icon color="primary" large>
           {{ icons.mdiHeart }}
-        </v-icon>
+        </v-icon> -->
         <div class="text-body-1 text-center" v-html="$t('views.favorites.promptForAction')" />
         <v-btn :to="isLoggedIn ? '/channel' : '/login'">
           {{ isLoggedIn ? $t("views.favorites.manageFavorites") : $t("component.mainNav.login") }}
@@ -185,7 +185,7 @@ export default {
             this.refreshTimer = null;
         }
     },
-    beforeDestroy() {
+    beforeUnmount() {
         console.log("Destroying, so deleting the refresh timer in HomeFav");
         if (this.refreshTimer) {
             clearInterval(this.refreshTimer);

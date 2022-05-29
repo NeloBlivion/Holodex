@@ -94,7 +94,7 @@ export default {
 
         // set lang
         this.$i18n.locale = this.$store.state.settings.lang;
-        this.$vuetify.lang.current = this.$store.state.settings.lang;
+        // this.$vuetify.lang.current = this.$store.state.settings.lang;
 
         // relog if necessary:
         this.$store.dispatch("loginCheck");

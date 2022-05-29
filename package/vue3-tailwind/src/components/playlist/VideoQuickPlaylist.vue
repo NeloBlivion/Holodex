@@ -68,15 +68,15 @@ export default {
                 if (contains) this.$store.commit("playlist/removeVideoByID", this.video);
                 else this.$store.commit("playlist/addVideo", this.video);
             } else {
-                this.$set(this.playlistState[index], "loading", true);
+                Vue.set(this.playlistState[index], "loading", true);
                 // otherwise it's non special.
                 if (contains) await backendApi.deleteVideoFromPlaylist(this.videoId, id, this.jwt);
                 else await backendApi.addVideoToPlaylist(this.videoId, id, this.jwt);
 
-                this.$set(this.playlistState[index], "loading", false);
+                Vue.set(this.playlistState[index], "loading", false);
             }
 
-            this.$set(this.playlistState[index], "contains", !contains);
+            Vue.set(this.playlistState[index], "contains", !contains);
         },
     },
 };

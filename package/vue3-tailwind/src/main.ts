@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp, h } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router/index'
@@ -10,7 +10,13 @@ import { vuetify, i18n } from './vuetify'
 import * as icons from './utils/icons'
 
 const head = createHead()
-const app = createApp(App)
+const app = createApp({
+    i18n,
+    router,
+    store,
+    vuetify,
+    render: () => h(App)
+})
 
 app.use(store);
 app.use(i18n);
@@ -19,6 +25,10 @@ app.use(createPinia())
 app.use(router)
 app.use(head)
 app.use(VueQueryPlugin);
+
+app.config.devtools = true;
+app.config.performance = true;
+
 
 app.config.globalProperties.icons = icons
 app.mount('#app')

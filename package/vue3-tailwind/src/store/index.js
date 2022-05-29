@@ -1,5 +1,6 @@
 /* eslint-disable func-names */
 import { createStore } from "vuex";
+import Vue from 'vue';
 
 import createPersistedState from "vuex-persistedstate";
 import createMutationsSharer from "vuex-shared-mutations";

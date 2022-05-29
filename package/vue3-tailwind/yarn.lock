@@ -428,6 +428,11 @@
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-2.2.4.tgz#ab8b199ca82496b05d2654c5f34ffcf9b947243d"
   integrity sha512-ev9AOlp0ljCaDkFZF3JwC/pD2N4Hh+r5srl5JHM6BKg5+99jiiK0rE/XaRs3pVm1wzyKkjUy/StBSoXX5fFzcw==
 
+"@vue/compat@^3.2.34":
+  version "3.2.36"
+  resolved "https://registry.yarnpkg.com/@vue/compat/-/compat-3.2.36.tgz#fe9c1d488895a18fddf2e3b67646c83b3e890797"
+  integrity sha512-9rb6TvZ1HNUjAIEMsgpvg8hUy05zdmg/ILJDXbDCTkv7CusBa+813LHeSLVCwUiX5PndI/dganPxVZDftgud1g==
+
 "@vue/compiler-core@3.2.31":
   version "3.2.31"
   resolved "https://registry.yarnpkg.com/@vue/compiler-core/-/compiler-core-3.2.31.tgz#d38f06c2cf845742403b523ab4596a3fda152e89"
@@ -4064,6 +4069,11 @@ vue-router@~4.0:
   integrity sha512-wAO6zF9zxA3u+7AkMPqw9LjoUCjSxfFvINQj3E/DceTt6uEz1XZLraDhdg2EYmvVwTBSGlLYsUw8bDmx0754Mw==
   dependencies:
     "@vue/devtools-api" "^6.0.0"
+
+vue-virtual-scroll-list@^2.3.2:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/vue-virtual-scroll-list/-/vue-virtual-scroll-list-2.3.3.tgz#290f0d04be814b93585f2ef232097b671141e5b1"
+  integrity sha512-heuwlZ+lEdcVSp66CpVXnyNdsiHl/XU1cvqJb0yUHGlLv6DGK8OX16FH8I3w/wKNXtHSPF9itdBBGJFrXkyHeg==
 
 vue@~3.2:
   version "3.2.31"

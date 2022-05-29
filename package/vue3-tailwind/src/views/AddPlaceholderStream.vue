@@ -418,7 +418,7 @@ export default {
             this.liveTime = vt.format("HH:mm");
             this.duration = video.duration / 60;
             this.certainty = video.certainty;
-            this.$set(this, "channel", video.channel);
+            Vue.set(this, "channel", video.channel);
         },
     },
 };

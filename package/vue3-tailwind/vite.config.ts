@@ -20,7 +20,15 @@ console.log(__dirname);
 export default defineConfig({
   plugins: [
     yaml(),
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          compatConfig: {
+            MODE: 2
+          }
+        }
+      }
+    }),
     AutoImport({
       imports: [
         'vue',
@@ -43,6 +51,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      vue: '@vue/compat',
       '@': resolve(__dirname, 'src'),
     },
   },

@@ -27,6 +27,7 @@ declare module '@vue/runtime-core' {
     CustomUrlField: typeof import('./src/components/multiview/CustomUrlField.vue')['default']
     EditPlaylist: typeof import('./src/components/playlist/EditPlaylist.vue')['default']
     EmptyCell: typeof import('./src/components/multiview/EmptyCell.vue')['default']
+    EmptyComponent: typeof import('./src/components/EmptyComponent.vue')['default']
     EnhancedEntry: typeof import('./src/components/tlscripteditor/EnhancedEntry.vue')['default']
     Entrytr: typeof import('./src/components/tlscripteditor/Entrytr.vue')['default']
     ExportToFile: typeof import('./src/components/tlscripteditor/ExportToFile.vue')['default']
