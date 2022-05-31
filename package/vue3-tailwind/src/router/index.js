@@ -1,7 +1,7 @@
 // import Vue from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { loadLanguageAsync } from "@/vuetify";
-// import HomeFave from "../views/HomeFave.vue";
+import HomeFave from "../views/HomeFave.vue";
 import store from "../store/index";
 import EmptyComponent from "@/components/EmptyComponent.vue"
 // const Channel = () => import("../views/Channel.vue");
@@ -31,7 +31,7 @@ const routes = [
     {
         path: "/",
         name: "home",
-        component: EmptyComponent,
+        component: HomeFave,
         props: { isFavPage: false },
         beforeEnter(to, from, next) {
             // from.name === null when first load, check settings and redirect if necessary
