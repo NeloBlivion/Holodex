@@ -128,6 +128,7 @@ export const asyncLang = {
 
 // eslint-disable-next-line new-cap
 export const i18n = new createI18n({
+    allowComposition: true,
     locale: "en", // Set locale
     fallbackLocale: "en",
     // Set default locale messages,
@@ -140,7 +141,7 @@ export const i18n = new createI18n({
          * @param choicesLength {number} an overall amount of available choices
          * @returns a final choice index to select plural word by
          */
-        ru(choice, choicesLength) {
+        ru(choice: number, choicesLength: number) {
             // this === VueI18n instance, so the locale property also exists here
             if (choice === 0) {
                 return 0;

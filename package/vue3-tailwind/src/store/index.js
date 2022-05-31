@@ -196,11 +196,11 @@ export default createStore({
     },
     actions: {
         checkActiveSockets({ state }) {
-            const context = this;
+            const context = this._vm.$socket;
             setTimeout(() => {
                 if (state.activeSockets === 0) {
                     // eslint-disable-next-line no-underscore-dangle
-                    context._vm.$socket.client.disconnect();
+                    context.client.disconnect();
                 }
             }, 10000);
         },

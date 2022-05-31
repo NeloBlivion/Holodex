@@ -12,6 +12,7 @@ import {
     BILIBILI_UNLIVE_VIDEO_URL_REGEX,
     */
 } from "@/utils/consts";
+import { mapMutations, mapState } from "vuex";
 
 import { langs } from "@/vuetify";
 
@@ -177,9 +178,6 @@ export function localSortChannels(channels, { sort, order = "asc" }) {
 export function arrayChunk(arr, size) {
     return Array.from(new Array(Math.ceil(arr.length / size)), (_, i) => arr.slice(i * size, i * size + size));
 }
-
-// eslint-disable-next-line import/first
-import { mapMutations, mapState } from "vuex";
 
 /**
  * Returns an object map to be spread to computed variables in a component

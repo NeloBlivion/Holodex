@@ -54,7 +54,7 @@
           </router-link>
           <OrgSelector />
         </v-toolbar-title>
-        <SearchBar v-if="!isMobile" key="main-search-bar" />
+        <!-- <SearchBar v-if="!isMobile" key="main-search-bar" /> -->
 
         <!--================= Account [👤] Button (Desktop Only) ================-->
 
@@ -128,7 +128,7 @@
         <v-app-bar-nav-icon class="backButton" @click="searchBarExpanded = false">
           <v-icon>{{ icons.mdiClose }}</v-icon>
         </v-app-bar-nav-icon>
-        <SearchBar key="main-search-bar" :autofocus="isMobile" />
+        <!-- <SearchBar key="main-search-bar" :autofocus="isMobile" /> -->
       </template>
 
       <!--=================== END OF Expanded Search (Mobile Only) =======================-->
