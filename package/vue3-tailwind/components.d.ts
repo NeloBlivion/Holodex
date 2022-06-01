@@ -33,6 +33,7 @@ declare module '@vue/runtime-core' {
     ExportToFile: typeof import('./src/components/tlscripteditor/ExportToFile.vue')['default']
     GenericListLoader: typeof import('./src/components/video/GenericListLoader.vue')['default']
     GoogleSignInButton: typeof import('./src/components/common/GoogleSignInButton.vue')['default']
+    HolodexFrame: typeof import('./src/components/HolodexFrame.vue')['default']
     ImportFile: typeof import('./src/components/tlscripteditor/ImportFile.vue')['default']
     ImportMchad: typeof import('./src/components/tlscriptmanager/ImportMchad.vue')['default']
     InfiniteLoad: typeof import('./src/components/common/InfiniteLoad.vue')['default']

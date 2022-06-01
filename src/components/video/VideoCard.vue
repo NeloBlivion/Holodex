@@ -103,11 +103,11 @@
         class="rounded"
         :class="{'hover-opacity': data.placeholderType === 'scheduled-yt-stream'}"
       />
-      <v-img
+      <!-- <v-img
         v-else-if="!horizontal && shouldHideThumbnail"
         width="100%"
         :aspect-ratio="60 / 9"
-      />
+      /> -->
     </div>
     <a
       class="d-flex flex-row flex-grow-1 no-decoration video-card-text"
@@ -252,15 +252,11 @@ import {
     localizedDayjs,
 } from "@/utils/time";
 import { mdiBroadcast, mdiTwitch } from "@mdi/js";
-import VideoCardMenu from "../common/VideoCardMenu.vue";
 /* eslint-disable no-unused-vars */
 
 export default {
     name: "VideoCard",
     components: {
-        ChannelImg: () => import("@/components/channel/ChannelImg.vue"),
-        PlaceholderCard: () => import("./PlaceholderCard.vue"),
-        VideoCardMenu,
     },
     props: {
         video: {

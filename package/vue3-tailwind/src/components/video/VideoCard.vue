@@ -212,7 +212,7 @@
       </v-menu>
     </a>
     <!-- optional breaker object to row-break into a new row. -->
-    <v-list-item-action
+    <!-- <v-list-item-action
       v-if="!!$slots.action || activePlaylistItem"
       class="video-card-item-actions"
     >
@@ -232,7 +232,7 @@
         </button>
       </template>
       <slot name="action" />
-    </v-list-item-action>
+    </v-list-item-action> -->
 
     <!-- 👻👻👻 Placeholder MODAL 👻👻👻 -->
     <placeholder-card v-if="placeholderOpen" v-model="placeholderOpen" :video="data" />
@@ -501,7 +501,7 @@ export default {
             this.updatecycle = null;
         }
     },
-    beforeDestroy() {
+    beforeUnmount() {
         if (this.updatecycle) {
             clearInterval(this.updatecycle);
             this.updatecycle = null;

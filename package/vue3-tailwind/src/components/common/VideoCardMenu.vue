@@ -78,9 +78,9 @@
 
     <template v-if="$store.getters['isSuperuser']">
       <!-- <v-list-item> -->
-      <v-lazy>
+      <!-- <v-lazy>
         <watch-quick-editor :video="video" />
-      </v-lazy>
+      </v-lazy> -->
       <!-- </v-list-item> -->
     </template>
   </v-list>

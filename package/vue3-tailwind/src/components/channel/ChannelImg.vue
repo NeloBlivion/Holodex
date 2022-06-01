@@ -9,7 +9,12 @@
       (channel.group ? `\n> ${channel.group}` : '') "
     @click.exact.prevent="goToChannel"
   >
-    <v-lazy
+    <v-img
+:lazy-src="photo"       :width="size"
+      :height="size"       :class="rounded && 'rounded-circle'"
+
+></v-img>
+    <!-- <v-lazy
       tag="img"
       :src="photo"
       crossorigin="anonymous"
@@ -19,7 +24,7 @@
       class="d-block"
       :class="rounded && 'rounded-circle'"
       @error="err = true"
-    />
+    /> -->
   </a>
   <v-avatar
     v-else
