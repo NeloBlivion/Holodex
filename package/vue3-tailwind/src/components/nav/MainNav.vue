@@ -315,7 +315,7 @@ export default {
         if (
             !window.location.pathname.match("^/watch|^/multiview|^/infinite")
             && !this.isMobile
-            && !this.$vuetify?.breakpoint?.md
+            && !this.$vuetify?.display?.md
         ) {
             this.navDrawer = true;
         }

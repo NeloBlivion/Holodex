@@ -3,7 +3,7 @@
   <v-card v-if="!horizontal" class="pa-3">
     <v-row class="flex-column flex-nowrap flex-sm-wrap" style="height: 80vh">
       <v-col
-        v-if="$vuetify?.breakpoint?.xs"
+        v-if="$vuetify?.display?.xs"
         class="org-dropdown"
         cols="12"
         sm="4"

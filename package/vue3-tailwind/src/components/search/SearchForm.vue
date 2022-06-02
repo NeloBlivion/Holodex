@@ -62,7 +62,7 @@
               :disabled="commentIsFilled"
             />
           </v-col>
-          <v-divider v-if="!$vuetify?.breakpoint?.smAndDown" vertical />
+          <v-divider v-if="!$vuetify?.display?.smAndDown" vertical />
           <v-col cols="12" md="6">
             <v-text-field
               v-model="comment"

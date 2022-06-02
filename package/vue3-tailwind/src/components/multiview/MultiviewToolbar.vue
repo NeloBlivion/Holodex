@@ -30,7 +30,7 @@
               :color="b.color"
               icon
               v-bind="attrs"
-              :class="{ 'mx-1': $vuetify?.breakpoint?.lgAndUp }"
+              :class="{ 'mx-1': $vuetify?.display?.lgAndUp }"
               @click="b.onClick"
               v-on="on"
             >
@@ -45,7 +45,7 @@
           :key="`mv-btn-${index}`"
           :color="b.color"
           icon
-          :class="{ 'mx-1': $vuetify?.breakpoint?.lgAndUp }"
+          :class="{ 'mx-1': $vuetify?.display?.lgAndUp }"
           @click="b.onClick"
         >
           <v-icon>{{ b.icon }}</v-icon>

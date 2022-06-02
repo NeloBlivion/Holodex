@@ -75,7 +75,7 @@ export default {
         },
         colSize() {
             if (this.horizontal || this.denseList) return 1;
-            return this.cols[this.$vuetify?.breakpoint?.name];
+            return this.cols[this.$vuetify?.display?.name];
         },
     },
     methods: {

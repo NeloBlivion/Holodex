@@ -48,7 +48,7 @@
           </v-dialog>
         </div>
         <v-sheet style="height:12px;" />
-        <template slot="rightTitleAction">
+        <template #rightTitleAction>
           <v-btn
             v-if="video.placeholderType === 'scheduled-yt-stream'"
             large
@@ -140,7 +140,7 @@ export default {
     },
     computed: {
         isTooSmall() {
-            return this.$vuetify?.breakpoint?.width < 700;
+            return this.$vuetify?.display?.width < 700;
         },
         videoWithMentions() {
             return { ...this.video, mentions: this.mentions };

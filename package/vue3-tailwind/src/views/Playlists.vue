@@ -146,7 +146,7 @@ export default {
             return this.isSaved || confirm(this.$t("views.playlist.change-loss-warning"));
         },
         getPlaylistPreview(playlist) {
-            const limit = this.$vuetify?.breakpoint?.xs ? 1 : 4;
+            const limit = this.$vuetify?.display?.xs ? 1 : 4;
             if (playlist.video_ids) return playlist.video_ids.slice(0, limit);
             if (playlist.videos) return playlist.videos.slice(0, limit).map(({ id }) => id);
             return [];

@@ -1,12 +1,12 @@
 <template>
   <div v-show="!hasError && !(isFavPage && !(isLoggedIn && favoriteChannelIDs.size > 0))">
     <v-col
-      v-show="!$vuetify?.breakpoint?.isXs"
+      v-show="!$vuetify?.display?.isXs"
       xs="4"
       sm="4"
       class="ma-0 pb-0 pt-0"
     >
-      <portal :to="portalName" :disabled="$vuetify?.breakpoint?.xs" class="justify-space-between d-flex flex-grow-1 mx-n2">
+      <portal :to="portalName" :disabled="$vuetify?.display?.xs" class="justify-space-between d-flex flex-grow-1 mx-n2">
         <v-menu
           :close-on-content-click="false"
           offset-y
@@ -269,9 +269,9 @@ export default {
             };
         },
         shouldIncludeAvatar() {
-            if (this.$vuetify?.breakpoint?.md && this.currentGridSize > 1) return false;
-            if (this.$vuetify?.breakpoint?.sm && this.currentGridSize > 0) return false;
-            if (this.$vuetify?.breakpoint?.xs && this.currentGridSize > 0) return false;
+            if (this.$vuetify?.display?.md && this.currentGridSize > 1) return false;
+            if (this.$vuetify?.display?.sm && this.currentGridSize > 0) return false;
+            if (this.$vuetify?.display?.xs && this.currentGridSize > 0) return false;
             return true;
         },
         shouldHideCollabs() {

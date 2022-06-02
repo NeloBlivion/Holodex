@@ -10,7 +10,7 @@
       v-show="status === STATUSES.READY || status === STATUSES.COMPLETED"
       v-model="page"
       :length="pages"
-      :total-visible="TOTAL_PAGINATION_COUNT[$vuetify?.breakpoint?.name]"
+      :total-visible="TOTAL_PAGINATION_COUNT[$vuetify?.display?.name]"
     />
     <div v-show="status === STATUSES.READY || status === STATUSES.COMPLETED" v-else>
       <v-btn class="ma-2 pr-6" :disabled="page === 1" @click="page -= 1">

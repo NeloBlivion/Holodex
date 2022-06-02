@@ -255,7 +255,8 @@ export const vuetify = createVuetify({
         i18n,
         useI18n,
     }),
+    theme: { defaultTheme: 'dark' },
 })
 
-console.log(components);
-console.log(EmptyComponent);
+// console.log(components);
+// console.log(EmptyComponent);

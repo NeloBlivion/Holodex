@@ -1,4 +1,6 @@
 <template>
+
+
   <v-app
     :style="{ background: $vuetify.theme.themes[darkMode ? 'dark' : 'light'].background }"
   >
@@ -65,7 +67,7 @@ export default {
         },
         // watches change in breakpoint from vuetify and updates store
         // eslint-disable-next-line func-names
-        "$vuetify?.breakpoint?.name": function () {
+        "$vuetify?.display?.name": function () {
             this.updateIsMobile();
         },
         // eslint-disable-next-line func-names
@@ -120,7 +122,7 @@ export default {
     },
     methods: {
         updateIsMobile() {
-            this.$store.commit("setIsMobile", ["xs", "sm"].includes(this.$vuetify?.breakpoint?.name));
+            this.$store.commit("setIsMobile", ["xs", "sm"].includes(this.$vuetify?.display?.name));
         },
         interceptError(error) {
             // Any status codes that falls outside the range of 2xx cause this function to trigger

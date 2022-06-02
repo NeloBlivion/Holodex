@@ -109,8 +109,8 @@ export default {
             return null;
         },
         size() {
-            const width = 2 * (this.$vuetify?.breakpoint?.xs ? 108 : 192);
-            const height = 2 * (this.$vuetify?.breakpoint?.xs ? 192 : 108);
+            const width = 2 * (this.$vuetify?.display?.xs ? 108 : 192);
+            const height = 2 * (this.$vuetify?.display?.xs ? 192 : 108);
             return { width, height };
         },
     },

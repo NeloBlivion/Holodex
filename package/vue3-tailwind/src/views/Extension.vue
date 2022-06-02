@@ -1,5 +1,5 @@
 <template>
-  <v-container :class="{'pt-12': $vuetify?.breakpoint?.mdAndUp}">
+  <v-container :class="{'pt-12': $vuetify?.display?.mdAndUp}">
     <v-card>
       <v-card-title>
         <v-img src="img/holodex-plus/holodex-plus-icon.png" :max-width="32" class="mr-2" /> {{ $t('views.extension.title') }}

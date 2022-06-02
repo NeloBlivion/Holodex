@@ -69,10 +69,10 @@ export default {
                 sm: tablet,
                 xl: tv,
             };
-            return banners[this.$vuetify?.breakpoint?.name] || banner;
+            return banners[this.$vuetify?.display?.name] || banner;
         },
         avatarSize() {
-            switch (this.$vuetify?.breakpoint?.name) {
+            switch (this.$vuetify?.display?.name) {
                 case "xs":
                     return 40;
                 case "sm":
