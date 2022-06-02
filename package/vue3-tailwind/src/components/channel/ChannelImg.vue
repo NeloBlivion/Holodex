@@ -10,7 +10,7 @@
     @click.exact.prevent="goToChannel"
   >
     <v-img
-:lazy-src="photo"       :width="size"
+:src="photo"       :width="size"
       :height="size"       :class="rounded && 'rounded-circle'"
 
 ></v-img>
@@ -26,7 +26,7 @@
       @error="err = true"
     /> -->
   </a>
-  <v-avatar
+  <!-- <v-avatar
     v-else
     color="secondary"
     :width="size"
@@ -37,7 +37,7 @@
     <v-icon>
       {{ icons.mdiAccountCircleOutline }}
     </v-icon>
-  </v-avatar>
+  </v-avatar> -->
 </template>
 
 <script lang="ts">

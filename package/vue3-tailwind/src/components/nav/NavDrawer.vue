@@ -20,17 +20,17 @@
           :class="{ 'v-list-item--active': $route.fullPath === page.path }"
           @click="(e) => handlePageClick(page, e)"
         >
-          <v-list-item-icon v-if="page.name === 'Musicdex'" style="max-width:24px">
+          <!-- <v-list-item-icon v-if="page.name === 'Musicdex'" style="max-width:24px">
             <musicdex-logo />
           </v-list-item-icon>
           <v-list-item-icon v-else>
             <v-icon>{{ page.icon }}</v-icon>
-          </v-list-item-icon>
+          </v-list-item-icon> -->
           <v-list-item-content>
             <v-list-item-title v-html="page.name" />
           </v-list-item-content>
           <!-- Quick Settings Popup -->
-          <v-list-item-icon v-if="page.path === '/settings' && $vuetify?.display?.smAndUp">
+          <!-- <v-list-item-icon v-if="page.path === '/settings' && $vuetify?.display?.smAndUp">
             <v-menu
               v-model="showSettings"
               :right="false"
@@ -42,12 +42,13 @@
                 <v-icon v-bind="attrs" v-on="on" @click.stop.prevent>
                   {{ mdiTuneVariant }}
                 </v-icon>
+                <div></div>
               </template>
               <v-card rounded="lg" class="py-n2 scrollable">
                 <settings slim @close="showSettings = false" />
               </v-card>
             </v-menu>
-          </v-list-item-icon>
+          </v-list-item-icon> -->
         </v-list-item>
         <v-divider v-if="page.divider" :key="`${page.path}-divider`" />
       </template>
@@ -63,9 +64,9 @@
           :class="{ 'v-list-item--active': $route.fullPath === page.path }"
           @click="(e) => handlePageClick(page, e)"
         >
-          <v-list-item-icon>
+          <!-- <v-list-item-icon>
             <v-icon>{{ page.icon }}</v-icon>
-          </v-list-item-icon>
+          </v-list-item-icon> -->
           <v-list-item-content>
             <v-list-item-title v-html="page.name" />
           </v-list-item-content>
@@ -76,18 +77,18 @@
     <v-divider />
     <div class="d-flex justify-center">
       <v-btn
-        icon
         x-small
         @click="$emit('expand', {});"
       >
-        <v-icon>{{ expand ? mdiChevronUp : mdiChevronDown }}</v-icon>
+      Expand
+        <!-- <v-icon>{{ expand ? mdiChevronUp : mdiChevronDown }}</v-icon> -->
       </v-btn>
     </div>
     <v-list dense>
       <v-subheader class="pl-5 text-overline">
         {{ $t("component.mainNav.favorites") }}
       </v-subheader>
-      <template v-for="vid in collapsedFavorites">
+      <!-- <template v-for="vid in collapsedFavorites">
         <v-list-item
           v-if="vid"
           :key="vid.id"
@@ -104,11 +105,11 @@
             </span>
           </v-list-item-action-text>
         </v-list-item>
-      </template>
+      </template> -->
       <v-list-item v-if="favorites.length > 8" link @click="favoritesExpanded = !favoritesExpanded">
-        <v-list-item-action>
+        <!-- <v-list-item-action>
           <v-icon>{{ favoritesExpanded ? icons.mdiChevronUp : icons.mdiChevronDown }}</v-icon>
-        </v-list-item-action>
+        </v-list-item-action> -->
         <v-list-item-content>
           <v-list-item-title>
             {{ favoritesExpanded ? $t("views.favorites.close") : $t("views.favorites.showall") }}
@@ -123,19 +124,19 @@
     </v-list>
     <br>
     <v-sheet id="bottom-bar" dense class="grey--text mt-auto mb-0">
-      <a href="https://twitter.com/holodex" title="Twitter">
-        <v-icon small color="#1DA1F2">{{ icons.mdiTwitter }}</v-icon>
+      <a href="https://twitter.com/holodex" title="Twitter"> Twitter
+        <!-- <v-icon small color="#1DA1F2">{{ icons.mdiTwitter }}</v-icon> -->
       </a>
-      <a class="mx-2" title="Support holodex (Ko-fi)" href="https://ko-fi.com/holodex">
-        <v-icon small color="#FF5E5B">M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z</v-icon>
+      <a class="mx-2" title="Support holodex (Ko-fi)" href="https://ko-fi.com/holodex"> Kofi
+        <!-- <v-icon small color="#FF5E5B">M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z</v-icon> -->
       </a>
       <span>
         <small class="one-liner" style="font-size: 0.7rem;">© 2020 Holodex</small>
       </span>
 
-      <v-icon x-small color="grey" class="ml-auto">
+      <!-- <v-icon x-small color="grey" class="ml-auto">
         {{ icons.mdiEarth }}
-      </v-icon>
+      </v-icon> -->
       <router-link to="/settings" class=" one-liner">
         <small class="pl-1" style="font-size: 0.7rem">{{ language }}</small>
       </router-link>
@@ -146,21 +147,13 @@
 </template>
 
 <script lang="ts">
-import ChannelImg from "@/components/channel/ChannelImg.vue";
-import ChannelInfo from "@/components/channel/ChannelInfo.vue";
 import { langs } from "@/vuetify";
 import { dayjs, formatDurationShort } from "@/utils/time";
-import { mdiTuneVariant, mdiPatreon, mdiChevronUp, mdiChevronDown } from "@mdi/js";
-import Settings from "@/views/Settings.vue";
-import MusicdexLogo from "@/components/common/MusicdexLogo.vue";
+// import { mdiTuneVariant, mdiPatreon, mdiChevronUp, mdiChevronDown } from "@mdi/js";
 
 export default {
     name: "NavDrawer",
     components: {
-        ChannelImg,
-        ChannelInfo,
-        Settings,
-        MusicdexLogo,
     },
     props: {
         pages: {
@@ -187,10 +180,10 @@ export default {
             ticker: null,
             showSettings: false,
 
-            mdiTuneVariant,
-            mdiPatreon,
-            mdiChevronDown,
-            mdiChevronUp,
+            // mdiTuneVariant,
+            // mdiPatreon,
+            // mdiChevronDown,
+            // mdiChevronUp,
         };
     },
     computed: {

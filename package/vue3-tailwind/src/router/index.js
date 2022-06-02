@@ -31,7 +31,7 @@ const routes = [
     {
         path: "/",
         name: "home",
-        component: HomeFave,
+        component: EmptyComponent,
         props: { isFavPage: false },
         beforeEnter(to, from, next) {
             // from.name === null when first load, check settings and redirect if necessary

@@ -7,7 +7,7 @@
     <MainNav />
 
     <v-main style="transition: none">
-      <PullToRefresh />
+      <!-- <PullToRefresh /> -->
       <keep-alive
         max="4"
         exclude="Watch,MugenClips,EditVideo,MultiView,Channel,Playlists,About"
@@ -15,9 +15,9 @@
         <router-view :key="viewKey" />
       </keep-alive>
     </v-main>
-    <PWAUpdate />
-    <ReportDialog />
-    <InstallPrompt v-if="$store.state.isMobile" />
+    <!-- <PWAUpdate /> -->
+    <!-- <ReportDialog /> -->
+    <!-- <InstallPrompt v-if="$store.state.isMobile" /> -->
   </v-app>
 </template>
 
