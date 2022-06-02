@@ -26,7 +26,11 @@ export default defineConfig({
       template: {
         compilerOptions: {
           compatConfig: {
-            MODE: 2
+            MODE: 3,
+            GLOBAL_SET: true,
+            GLOBAL_DELETE: true,
+            GLOBAL_EXTEND: true,
+            V_ON_KEYCODE_MODIFIER: true,
           }
         }
       }
