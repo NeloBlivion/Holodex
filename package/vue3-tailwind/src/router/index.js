@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import { loadLanguageAsync } from "@/vuetify";
 import HomeFave from "../views/HomeFave.vue";
 import store from "../store/index";
-import EmptyComponent from "@/components/EmptyComponent.vue"
+import HolodexFrame from "@/components/HolodexFrame.vue"
 // const Channel = () => import("../views/Channel.vue");
 // const Channels = () => import("../views/Channels.vue");
 // const ChannelVideos = () => import("../views/channel_views/ChannelVideos.vue");
@@ -31,7 +31,7 @@ const routes = [
     {
         path: "/",
         name: "home",
-        component: EmptyComponent,
+        component: HolodexFrame,
         props: { isFavPage: false },
         beforeEnter(to, from, next) {
             // from.name === null when first load, check settings and redirect if necessary

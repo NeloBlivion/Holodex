@@ -58,6 +58,7 @@ export default defineConfig({
   resolve: {
     alias: {
       vue: '@vue/compat',
+      'vuetify': '@vuetify/nightly',
       '@': resolve(__dirname, 'src'),
     },
   },

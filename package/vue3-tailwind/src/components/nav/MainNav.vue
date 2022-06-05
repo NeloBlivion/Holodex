@@ -64,12 +64,11 @@
           :item-count="$store.state.playlist.active.videos.length || 0"
           content-class="main-playlist-border"
         >
-          <template #activator="{ on, attrs }">
+          <template #activator="{ props }">
             <v-btn
-              v-bind="attrs"
+              v-bind="props"
               icon
               :class="{ 'ml-auto': isMobile }"
-              v-on="on"
             >
               <v-icon>{{ icons.mdiPlaylistPlay }}</v-icon>
             </v-btn>
@@ -89,12 +88,11 @@
           offset-y
           transition="slide-y-transition"
         >
-          <template #activator="{ on, attrs }">
+          <template #activator="{ props }">
             <v-btn
               icon
-              v-bind="attrs"
+              v-bind="props"
               class="ml-2"
-              v-on="on"
             >
               <v-icon v-if="!($store.state.userdata && $store.state.userdata.user)">
                 {{ icons.mdiAccountCircleOutline }}
@@ -110,6 +108,7 @@
 
           <!------- USER CARD ------->
           <user-card />
+          <v-icon></v-icon>
           <!------- END USER CARD ------->
         </v-menu>
 

@@ -17,6 +17,7 @@
     "@headlessui/vue": "^1.6.4",
     "@mdi/js": "^6.7.96",
     "@rollup/plugin-yaml": "^3.1.0",
+    "@vuetify/nightly": "^3.0.0-next-20220604.0",
     "@vueuse/core": "^8.6.0",
     "@vueuse/head": "~0.7",
     "daisyui": "^2.15.1",
@@ -27,7 +28,6 @@
     "vue-query": "^1.25.0",
     "vue-router": "~4.0",
     "vue-virtual-scroll-list": "^2.3.2",
-    "vuetify": "^3.0.0-beta.3",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
@@ -54,7 +54,7 @@
     "eslint-plugin-node": "~11.1",
     "eslint-plugin-promise": "~6.0",
     "eslint-plugin-security": "~1.4",
-    "eslint-plugin-vue": "~8",
+    "eslint-plugin-vue": "~9.1.0",
     "postcss": "~8.4",
     "postcss-import": "~14.1.0",
     "postcss-nesting": "~10",
