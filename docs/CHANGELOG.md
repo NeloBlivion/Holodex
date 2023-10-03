@@ -2,7 +2,52 @@
 
 ##### Unreleased
 
-- Development of Vue3 Holodex (release 3.0 ?!?!) is underway... If you like to influence how it looks, now is the best time to let us know.
+- **Development of Vue3-powered Holodex (release 3.0 ?!?!) is completely scrapped**. We're making it in **react** instead. If you like to influence how it looks, now is the best time to let us know.
+- If you are a **React UI engineer/designer** and would like to contribute to Holodex, drop by our discord!
+
+### 2.37 Holodex & Musicdex [*September 24th, 2023*]
+
+#### Holodex
+
+- Thanks LiviaMedeiros for showing favorites' collabs in the side drawer, it looks sick!
+- Thanks INCENDE for a navigation history fix, let us know on discord if you hate it, since this kind of changes might change back button behavior.
+- Thanks BonnetPonta for a small UI fix.
+- New TRANSLATIONS <3 As always thank so much to all of our UI translators.
+
+#### Musicdex
+
+Woot, haven't released musicdex in a while right? Xrave totally forgot how to write react code, but at least our maintainers do!
+
+- Thanks P-man for a change on the playback bar and settings. These are awesome. He also fixed a queue last song loop issue, and layout on blank channels + background color on the full screen player.
+
+- Translations for various languages <3
+
+
+
+
+
+### 2.36 Holodex [*August 12th, 2023*]
+
+- We got audited, yay.
+- We updated our privacy policy on the About Page.
+- Youtube icon sizes have been adjusted to satisfy guidelines posted on [Youtube Brand Resources](https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors)
+
+### 2.35 Holodex [*July 8th, 2023*]
+
+- I think twitter broke the timeline embed. This is entirely twitter's fault this time. Hmph!
+
+- Thanks LiviaMedeiros for fixing several bugs in:
+  - searching certain topics that don't encode correctly
+  - cleaning up UI on Watch page when clips are all blocked or empty
+
+- Thanks RSandz for fixing a update with Bottom nav bar on Mobile.
+
+- Multinational languages for Report system is added. as always a huge shout out to our UI translators over on [Crowdin](https://crowdin.com/project/holodex) for helping us bring [Holodex](https://crowdin.com/project/holodex) and [Musicdex](https://crowdin.com/project/musicdex) to more languages.
+
+### 2.34 Holodex [*June 30th 2023*]
+
+Report system is overhauled.
+
 
 ### 2.33 Holodex [*April 30th 2023*]
 

@@ -127,11 +127,15 @@ component:
       이 채널은 즐겨찾기 중인 {org} 멤버와 콜라보 중일 수도 있습니다. 설정에서 이 기능을 끌 수 있어요
     comments: Holodex가 취해야 할 행동은 무엇인가요?
     success: 신고되었습니다. 감사합니다!
+    consider: 필터를 사용하고 이 보고서를 삭제하는 것도 좋습니다.
     reasons:
       - 잘못된 동영상 태그
       - 매우 낮은 화질/오해의 소지가 있는 콘텐츠
       - 소속의 2차 장작 가이드라인을 위반하거나 부적절함
       - 기타
+      - 올바르지 않은 동영상 주제
+      - 올바르지 않은 채널 멘션
+      - '{1}은(는) {0}에 해당하지 않음'
   thirdpartycookie:
     explanation: >-
       인터넷 브라우저의 작동 방식으로 인해 엄격한 <b>타사 쿠키</b> 정책을 사용하는 일부 브라우저 또는 <kbd>YouTube.com</kbd> 쿠키를 차단하는 브라우저는 Youtube 채팅에 로그인하거나 사용하기 어려울 수 있습니다. <br /><br /> 타사 쿠키 차단에서 <kbd>Youtube.com</kbd>을 제외하거나 <kbd>Holodex.net</kbd>의 쿠키 보안 / 개인정보 수준을 낮추면 이 문제를 해결할 수 있습니다. <br /><br /> 이를 수행하는 방법에 대한 자세한 정보를 제공하는 일부 웹 사이트를 포함했습니다.
@@ -601,6 +605,7 @@ about:
       contents:
         '0': >-
           저희의 자체 호스팅 서버는 운영비가 월 60달러인 28코어 60GB 램 서버로, 기능들을 점점 더 확장하려고 하여 서버 비용을 충당하기 위해 <a href="https://ko-fi.com/holodex">Ko-fi</a>를 시작했습니다. (<a href="https://www.patreon.com/holodex">Patreon</a>도 있지만, 저희는 Ko-fi를 더 선호합니다.)<br /><br />또한 트위터에 피드백과 응원의 메시지를 보내주시고, <a href="https://crwd.in/holodex">Crowdin</a>을 통해 번역을 도우실 뿐만 아니라, 음악 데이터 저장소에도 기여함으로써 Holodex를 지원할 수 있습니다. 심지어 방송에서 재미있는 부분의 시간을 지정하여, 지정한 시간을 원래 방송 댓글에 다는 것만으로도 큰 도움이 됩니다!
+  privacyPolicy: 개인정보 취급방침
   gdpr: GDPR과 내 데이터
   gdprContent: >-
     Google Analytics 쿠키는 페이지뷰 추적을 위해 분석 목적으로 사용됩니다. 로그인 이후에 우리는 소셜 미디어 계정 사용자명과 아이디를 즐겨찾기와 연결시킵니다. 이 데이터에는 (Google) 이메일, Discord ID, 또는 Twitter 아이디가 포함될 수 있습니다.

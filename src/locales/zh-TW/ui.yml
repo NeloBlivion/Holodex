@@ -127,11 +127,15 @@ component:
       此頻道可能正與 {org} 成員或是您所收藏的VTuber連動。您可於設定頁面關閉此顯示功能。
     comments: 請於此處簡略描述您檢舉該影片的原因
     success: 檢舉已送出，謝謝您
+    consider: 推薦您啟用篩選器中的「隱藏連動實況」來解決此問題
     reasons:
       - 影片標籤錯誤
       - 影片品質過於低劣 / 含有誤導性內容
       - 違反了VTuber公司的二創條款或是不當內容
       - 其他原因
+      - 影片標籤錯誤
+      - 提及頻道錯誤
+      - 本{0}並非{1}的相關影片
   thirdpartycookie:
     explanation: >-
       因各家瀏覽器的運作原理不同，部分對於<b>第三方Cookie<b>擁有較多限制的瀏覽器，或是瀏覽器將 <kbd>YouTube.com<kbd> 的 Cookie 封鎖的情況下，可能會導致無法使用 / 無法登入YouTube聊天室。<br /><br /> 您可以透過將 <kbd>YouTube.com<kbd> 的第三方Cookie設置為白名單，或是降低您瀏覽器對 <kbd>Holodex.net</kbd> 的安全/隱私限制來解決此問題。<br /><br /> 以下列出幾個網站來讓您更加理解該如何執行此操作：
@@ -602,6 +606,7 @@ about:
       contents:
         '0': >-
           我們的網站是架於一台有著28核心處理器與60GB記憶體的自架伺服器上，運作成本大概是每月60美元（約1700台幣），並且未來希望在網站上加入更多的功能，因此我們建立了一個 <a href="https://ko-fi.com/holodex">Ko-fi 贊助計畫</a>來用於支付伺服器的運作費用（我們之前也有一個相同用途的 <a href="https://www.patreon.com/holodex">Patreon</a>，但 Ko-fi 對我們來說更加方便）<br /><br />除此之外．在Twitter上給我們支持與鼓勵，抑是給我們任何的意見回饋也是對我們的一種支持！更甚者，你也能在<a href="https://crwd.in/holodex">Crowdin</a>上幫助我們進行使用者介面的翻譯、在影片資料分頁協助我們進行Vtuber音樂資料的建立、在實況底下留言標註有趣的片段對我們來說都是很大的幫助！
+  privacyPolicy: 隱私權政策
   gdpr: 關於GDPR與我的資料
   gdprContent: >-
     我們僅使用「Google分析」的cookie來追蹤每頁的瀏覽人數並分析資料。當您登入後，我們會將您社群媒體帳號的帳號名稱/ID與網站收藏庫的內容綁定。記錄下的內容可能包括您的電子郵件（Google帳號）、Discord ID，或是Twitter帳號。

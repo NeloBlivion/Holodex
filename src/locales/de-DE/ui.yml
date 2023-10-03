@@ -127,11 +127,15 @@ component:
       Dieser Kanal kollaboriert möglicherweise mit einem {org} Mitglied oder mit deinen Favoriten. Du kannst diese Funktion in den Einstellungen deaktivieren
     comments: Welche Maßnahmen sollte Holodex ergreifen?
     success: Bericht gesendet, vielen Dank!
+    consider: Möglicherweise ist es besser, diese Meldung zu verwerfen und stattdessen den Filter zu verwenden.
     reasons:
       - Video falsch getaggt
       - Gefährlich niedrige Qualität/irreführende Inhalte
       - Verstößt gegen das Urheberrecht der Organisation oder ist unangemessen
       - Sonstiges
+      - Falsches Videothema
+      - Falsche/r Kanal/Kanäle aufgeführt
+      - Diese/s/r {0} gehört nicht zu {1}
   thirdpartycookie:
     explanation: >-
       Aufgrund der Funktionsweise deines Internetbrowsers, einiger Browser mit strengen Richtlinien für <b>Cookies von Dritten</b>, oder weil du <kbd>youtube.com</kbd> Cookies blockierst, können Schwierigkeiten beim Anmelden in / Verwenden des Youtube-Chats auftreten. <br /><br /> Dies kannst du durch Whitelisting von <kbd>youtube.com</kbd> in Blockierern von Cookies von Dritten, oder durch das Senken deiner Sicherheits-/Privatsphäreeinstellungen für <kbd>holodex.net</kbd> beheben. <br /><br /> Die hier aufgeführten Webseiten können dir zeigen, wie man das macht.
@@ -601,6 +605,7 @@ about:
       contents:
         '0': >-
           Unser selbst-gehosteter Server ist eine 28-Kern Maschine mit 60GB RAM, für welche Instandhaltungskosten von circa $60 USD pro Monat anfallen. Da wir mehr und mehr Features hinzufügen, haben wir ein <a href="https://ko-fi.com/holodex">Ko-fi</a> angelegt, um die Serverkosten zu decken. (<a href="https://www.patreon.com/holodex">Patreon</a> haben wir auch, aber Ko-fi gefällt uns besser.)<br /><br />Du kannst uns außerdem mit Feedback und Tweets unterstützen, uns mit der Übersetzung der Webseite via <a href="https://crwd.in/holodex">Crowdin</a> helfen, oder zu unserem Lied-Datenspeicher beitragen. Selbst das Kommentieren von Zeitstempeln lustiger Momente in den Stream-Kommentaren ist schon sehr hilfreich!
+  privacyPolicy: Datenschutzrichtlinien
   gdpr: DSGVO und meine Daten
   gdprContent: >-
     Ein Google-Analytics-Cookie wird verwendet, um Seitenaufrufe für unsere analytischen Zwecke zu verfolgen. Nach dem Anmelden verknüpfen wir deinen Benutzernamen und die ID deines Social Media Accounts mit deinen Favoriten. Diese Daten können deine E-Mail (für Google), deine Discord-ID oder dein Twitter-Handle beinhalten.

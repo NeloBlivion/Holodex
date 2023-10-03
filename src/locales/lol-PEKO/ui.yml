@@ -88,10 +88,13 @@ component:
     comments: What do next?
     success: Send repolt thanks you!!!
     reasons:
-      - Video tagged incorrectly
-      - Dangerously Low Quality/Misleading Content
-      - Violates the org's derivative work guidelines or inappropriate
+      - 
+      - 
+      - 
       - ader
+      - 
+      - 
+      - 
   thirdpartycookie:
     dialogTitle: holodex in youtube chatto
   playlist:
@@ -213,9 +216,9 @@ views:
       - Disucodo de login peko
       - Twitter de login peko
     usernameBtn:
-      - Change
+      - 
       - "Yes"
-      - Save
+      - 
   multiview:
     confirmOverwriteYes: "Yes"
     permalink: paamarink
